@@ -1,0 +1,119 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Buster</title>
+    <link href="https://fonts.cdnfonts.com/css/bw-modelica" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css\event.css' %}">
+    <link rel="stylesheet" href="{% static 'css\style.css' %}">
+</head>
+
+<body style="background-image: url( {% static 'img/event.jpg' %}); background-position: center;
+background-size: cover;
+background-repeat: no-repeat;">
+    <div class="">
+
+        
+        <h1 id="text-box">Instant Speech</h1>
+    </div>
+    <div class="container ">
+
+
+        <img src="{% static 'img/samarthya_poster.png' %}" alt="Samarthya poster" srcset="">
+
+    </div>
+    <div class="w3-container">
+        <h1>About the event</h1>
+
+        <p>The speaker is typically given their topic in the form of a quotation,
+            although there are a variety of other possible formats, such as an object,
+            proverb, one-word abstract, or another one of the many options.
+
+        </p>
+        <hr>
+    </div>
+    <div>
+        <h1>Time Limit</h1>
+        <p>3 minutes for preparation and 2 minutes for presentation.</p>
+
+        <h1>Examples</h1>
+        <table>
+            <ol>
+                <li>Digital Media Market vs Traditional Market</li>
+                <li>Impact of Startup</li>
+                <li>Android vs iOS</li>
+                <li>Artificial Intelligence</li>
+            </ol>
+        </table>
+
+        <h1>Organizer</h1>
+        <p>Abhishek-2000090056</p>
+    </div>
+
+    <!-- Footer Start -->
+    <div class="container-fluid position-relative overlay-top bg-dark text-white-50 py-1" id="about">
+        <div class="" style="margin-top: 90px;">
+            <div class="container mt-5 pt-2">
+                <div class="row">
+                    <div class="col-md-6 mb-1">
+                        <a href="index.html" class="navbar-brand">
+                            <h1 class="display-4" style="color: rgba(167,0,0,1);
+                            color: linear-gradient(343deg, rgba(167,0,0,1) 21%, rgba(7,255,244,1) 100%); text-align: center; font-family:Le major;">S<span style="text-align: center; font-family:Zaptron;">amarthya</span></h1>
+                        </a>
+                        <p class="m-0" style="color: azure;">National level techno-cultural fest organized by the Dept of CS-IT . It is a two-day festival filled with activities, workshops and cultural activities, which focuses on testing the potential of students in both cultural and academic events which helps in improving their individual skills and bring an exposure.</p>
+
+
+                    </div>
+                    <div class="col-md-6 mb-1">
+                        <h3 class="text-white mb-4"></h3>
+                        <div class="w-100">
+                        </div>
+                    </div>
+                </div>
+                <hr style="background-color: azure;">
+                <div class="row">
+                    <div class="col-md-6 mb-1">
+                        <h3 class="text-white mb-1">Get In Touch</h3>
+                        <p><i class="fa fa-map-marker-alt mr-1"></i>Green Fields, Vaddeswaram, Andhra Pradesh 522302</p>
+                        <p><i class="fa fa-phone-alt mr-1"></i>+ 86453 50200</p>
+                        <p><i class="fa fa-envelope mr-1"></i>@kluniversity.in</p>
+                        <div class="d-flex justify-content-start mt-1">
+                            <a target="_blank" class="text-white mr-3" href="https://twitter.com/klcsit"><i class="fab fa-2x fa-twitter"></i></a>
+                            <a target="_blank" class="text-white mr-3" href="https://www.facebook.com/kl.csit"><i class="fab fa-2x fa-facebook-f"></i></a>
+                            <a target="_blank" class="text-white mr-3" href="#"><i class="fab fa-2x fa-linkedin-in"></i></a>
+                            <a target="_blank" class="text-white" href="https://www.instagram.com/kl.csit/"><i class="fab fa-2x fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-1">
+                        <h3 class="text-white mb-1">Quick Links</h3>
+                        <div class="d-flex flex-column justify-content-start">
+                            <a class="text-white-50 mb-1" href="{%  url 'home' %}"><i class="fa fa-angle-right mr-2"></i>Home</a>
+                            <a class="text-white-50 mb-1" href="#events"><i class="fa fa-angle-right mr-2"></i>Events</a>
+                            <a class="text-white-50 mb-1" href="{% url 'Gallery' %}"><i class="fa fa-angle-right mr-2"></i>Gallery</a>
+                            <a class="text-white-50 mb-1" href="{%  url 'about' %}"><i class="fa fa-angle-right mr-2"></i>About</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="px-2 py-0" style="background-color: brown;">
+            <center>
+                <p class="m-0">Copyright &copy; <a class="text-white" href="#">SAMARTHYA</a>. All Rights Reserved.
+                </p>
+            </center>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary rounded-0 btn-lg-square back-to-top"><i
+            class="fa fa-angle-double-up"></i></a>
+</body>
+<script src="{% static 'event.js' %}"></script>
+
+</html>

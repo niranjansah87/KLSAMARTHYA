@@ -56,11 +56,7 @@
                  <span>Email :</span>
                  <input type="email" name="update_email" value="{{pdb.email}}" class="box" disabled>
                  <span>Payment Status:</span>
-                 {% if p.True %}
-                 <input value="Paid" class="box" disabled>
-                 {% else %}
-                 <input value="Unpaid" class="box" disabled>
-                 {% endif %}
+                 <input value="{{p.text}}" class="box" disabled>
               </div>
               
               

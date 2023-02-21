@@ -1,607 +1,1056 @@
-{% extends "base.html" %} {% block content %} {% load static %}
-    {% block indexcss %}
-    <link href="{% static 'img/favicon.ico' %}" rel="icon">
-    <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600;700&family=Open+Sans:wght@400;600&display=swap"
-        rel="stylesheet">
-    <!-- Font Awesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <!-- Libraries Stylesheet -->
-    <link href="{% static 'lib/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
-    <!-- Customized Bootstrap Stylesheet -->
-    <link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css">
-    {% endblock indexcss %}
-    <!-- Favicon -->
+{% extends "base.html" %} {% block content %} {% load static %} 
+{% block indexcss %}
+<link href="{% static 'img/favicon.ico' %}" rel="icon" />
+<!-- Google Web Fonts -->
+<link rel="preconnect" href="https://fonts.gstatic.com" />
+<link
+  href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600;700&family=Open+Sans:wght@400;600&display=swap"
+  rel="stylesheet"
+/>
+<!-- Font Awesome -->
+<link
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+  rel="stylesheet"
+/>
+<!-- Libraries Stylesheet -->
+<link
+  href="{% static 'lib/owlcarousel/assets/owl.carousel.min.css' %}"
+  rel="stylesheet"
+/>
+<!-- Customized Bootstrap Stylesheet -->
+<link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css" />
+{% endblock indexcss %}
+<!-- Favicon -->
 <style>
-   
-    #bar {
-        background-color: transparent;
-        position: relative;
-    }
+  #bar {
+    background-color: transparent;
+    position: relative;
+  }
 
-    #nav {
-        width: 100vw;
-        height: 42vw;
-    }
+  #nav {
+    width: 100vw;
+    height: 55vw;
+  }
 
-    #login {
-        border-radius: 20px;
-        text-decoration: none;
-    }
+  #login {
+    border-radius: 20px;
+    text-decoration: none;
+  }
 
-    #login:hover {
-        background-color: green;
-    }
+  #login:hover {
+    background-color: green;
+  }
 
-    #register {
-        border-radius: 20px;
-        text-decoration: none;
-    }
+  #register {
+    border-radius: 20px;
+    text-decoration: none;
+  }
 
-    #register:hover {
-        background-color: green;
-        text-decoration: none;
-    }
-    
-    
-
+  #register:hover {
+    background-color: green;
+    text-decoration: none;
+  }
 </style>
-    
 
-    <!-- Header Start -->
-    <div id="nav" class="jumbotron jumbotron-fluid position-relative overlay-bottom" style="margin-bottom: 20px;">
-        <div class="container text-center my-5 py-5">
-
-
-            <div class="mx-auto mb-5" style="width: 100%; max-width: 600px;">
-                <!-- <h1 class="text-white mt-4 mb-4">Enjoy With us</h1> -->
-
-            </div>
-        </div>
+<!-- Header Start -->
+<div
+  id="nav"
+  class="jumbotron jumbotron-fluid position-relative overlay-bottom"
+  style="margin-bottom: 20px"
+>
+  <div class="container text-center my-5 py-5">
+    <div class="mx-auto mb-5" style="width: 100%; max-width: 600px">
+      <!-- <h1 class="text-white mt-4 mb-4">Enjoy With us</h1> -->
     </div>
-    <!-- Header End -->
-    <!--Countdown start-->
-    <div >
-    <div class="container1" id="countdown"></div>
-    <div class="content">
-        <h1 style="padding-top: 139px;">Countdown for the <span>Event</span> </h1>
-        <div class="launch-time">
-            <div>
-                <p id="days">00</p>
-                <span>Days</span>
-            </div>
-            <div>
-                <p id="hours">00</p>
-                <span>Hours</span>
-            </div>
-            <div>
-                <p id="minutes">00</p>
-                <span>Minutes</span>
-            </div>
-            <div>
-                <p id="seconds">06</p>
-                <span>Second</span>
-            </div>
-        </div>
-        <hr id="hr">
+  </div>
+</div>
+<!-- Header End -->
+<!--Countdown start-->
+<div>
+  <div class="container1" id="countdown"></div>
+  <div class="content">
+    <h1 style="padding-top: 540px">Countdown for the <span>Event</span></h1>
+    <div class="launch-time">
+      <div>
+        <p id="days">00</p>
+        <span>Days</span>
+      </div>
+      <div>
+        <p id="hours">00</p>
+        <span>Hours</span>
+      </div>
+      <div>
+        <p id="minutes">00</p>
+        <span>Minutes</span>
+      </div>
+      <div>
+        <p id="seconds">06</p>
+        <span>Second</span>
+      </div>
     </div>
-   
-    <div>
-        
-    </div>
+    <hr id="hr" />
+  </div>
+
+  <div></div>
 </div>
 
-    <!--Countdown end-->
+<!--Countdown end-->
 
-    <!-- About Start -->
+<!-- About Start -->
 
-    <!-- About End -->
-    
+<!-- About End -->
 
-    <!-- Courses Start -->
-    <div class="container-fluid px-0 py-4">
-        
-        <div class="row mx-0 justify-content-center">
-            <div class="col-lg-6">
-                <div class="section-title text-center position-relative mb-4" style="margin-top: 30%;">
-                    <h1 style="text-align: center; font-family:Comic Sans MS; margin-top: 48%;" class="display-4" id="events">Department of CSIT</h1>
-                    <h6 class="d-inline-block position-relative text-secondary text-uppercase pb-2">presents</h6>
-                    <h1 class="display-4" style="text-align: center; font-family:Le major; color: red;">S<span style="text-align: center; color: silver; font-family:Zaptron;">amarthya</span></h1>
-                </div>
-            </div>
-        </div>
-        <div id="events" class="owl-carousel courses-carousel">
-            <div class="courses-item position-relative">
-                <img class="img-fluid" src="{% static 'img/courses-1.jpg' %}" alt="">
-                <div class="courses-text">
-                    <h4 class="text-center text-white px-3">Word Block</h4>
-                    <div class="border-top w-100 mt-3">
-                        <div class="d-flex justify-content-between p-4">
-                            
-                        </div>
-                    </div>
-                    <div class="w-100 bg-white text-center p-4">
-                        <a class="btn btn-primary" href="detail.html">Event Detail</a>
-                    </div>
-                </div>
-            </div>
-            <div class="courses-item position-relative">
-                <img class="img-fluid" src="{% static 'img/courses-2.jpg' %}" alt="">
-                <div class="courses-text">
-                    <h4 class="text-center text-white px-3">Math Buzz</h4>
-                    <div class="border-top w-100 mt-3">
-                        <div class="d-flex justify-content-between p-4">
-                            
-                        </div>
-                    </div>
-                    <div class="w-100 bg-white text-center p-4">
-                        <a class="btn btn-primary" href="detail.html">Event Detail</a>
-                    </div>
-                </div>
-            </div>
-            <div class="courses-item position-relative">
-                <img class="img-fluid" src="{% static 'img/courses-3.jpg' %}" alt="">
-                <div class="courses-text">
-                    <h4 class="text-center text-white px-3">Jam</h4>
-                    <div class="border-top w-100 mt-3">
-                    </div>
-                    <div class="w-100 bg-white text-center p-4">
-                        <a class="btn btn-primary" href="detail.html">Event Detail</a>
-                    </div>
-                </div>
-            </div>
-            <div class="courses-item position-relative">
-                <img class="img-fluid" src="{% static 'img/courses-4.jpg' %}" alt="">
-                <div class="courses-text">
-                    <h4 class="text-center text-white px-3">Soduko</h4>
-                    <div class="border-top w-100 mt-3">
-                        <div class="d-flex justify-content-between p-4">
-                            
-                        </div>
-                    </div>
-                    <div class="w-100 bg-white text-center p-4">
-                        <a class="btn btn-primary" href="detail.html">Event Detail</a>
-                    </div>
-                </div>
-            </div>
-            <div class="courses-item position-relative">
-                <img class="img-fluid" src="{% static 'img/courses-5.jpg' %}" alt="">
-                <div class="courses-text">
-                    <h4 class="text-center text-white px-3">Smash Karts</h4>
-                    <div class="border-top w-100 mt-3">
-                        <div class="d-flex justify-content-between p-4">
-                            
-                        </div>
-                    </div>
-                    <div class="w-100 bg-white text-center p-4">
-                        <a class="btn btn-primary" href="detail.html">Event Detail</a>
-                    </div>
-                </div>
-            </div>
-            <div class="courses-item position-relative">
-                <img class="img-fluid" src="{% static 'img/courses-6.jpg' %}" alt="">
-                <div class="courses-text">
-                    <h4 class="text-center text-white px-3">Arrow Pulling (TUG of WAR)</h4>
-                    <div class="border-top w-100 mt-3">
-                        <div class="d-flex justify-content-between p-4">
-                            
-                        </div>
-                    </div>
-                    <div class="w-100 bg-white text-center p-4">
-                        <a class="btn btn-primary" href="detail.html">Event Detail</a>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="courses-item position-relative">
-                <img class="img-fluid" src="{% static 'img/courses-6.jpg' %}" alt="">
-                <div class="courses-text">
-                    <h4 class="text-center text-white px-3">Prime Suspects</h4>
-                    <div class="border-top w-100 mt-3">
-                        <div class="d-flex justify-content-between p-4">
-                            
-                        </div>
-                    </div>
-                    <div class="w-100 bg-white text-center p-4">
-                        <a class="btn btn-primary" href="detail.html">Event Detail</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="courses-item position-relative">
-                <img class="img-fluid" src="{% static 'img/courses-6.jpg' %}" alt="">
-                <div class="courses-text">
-                    <h4 class="text-center text-white px-3">Instant Speech</h4>
-                    <div class="border-top w-100 mt-3">
-                        <div class="d-flex justify-content-between p-4">
-                            
-                        </div>
-                    </div>
-                    <div class="w-100 bg-white text-center p-4">
-                        <a class="btn btn-primary" href="detail.html">Event Detail</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="courses-item position-relative">
-                <img class="img-fluid" src="{% static 'img/courses-6.jpg' %}" alt="">
-                <div class="courses-text">
-                    <h4 class="text-center text-white px-3">Pass the bomb</h4>
-                    <div class="border-top w-100 mt-3">
-                        <div class="d-flex justify-content-between p-4">
-                            
-                        </div>
-                    </div>
-                    <div class="w-100 bg-white text-center p-4">
-                        <a class="btn btn-primary" href="detail.html">Event Detail</a>
-                    </div>
-                </div>
-
-
-            </div>
-
-            <div class="courses-item position-relative">
-                <img class="img-fluid" src="{% static 'img/courses-6.jpg' %}" alt="">
-                <div class="courses-text">
-                    <h4 class="text-center text-white px-3">Skill Development Project -4</h4>
-                    <div class="border-top w-100 mt-3">
-                        <div class="d-flex justify-content-between p-4">
-                            
-                        </div>
-                    </div>
-                    <div class="w-100 bg-white text-center p-4">
-                        <a class="btn btn-primary" href="detail.html">Event Detail</a>
-                    </div>
-                </div>
-
-                
-            </div>
-
-            <div class="courses-item position-relative">
-                <img class="img-fluid" src="{% static 'img/courses-6.jpg' %}" alt="">
-                <div class="courses-text">
-                    <h4 class="text-center text-white px-3">Project Based Learning -2</h4>
-                    <div class="border-top w-100 mt-3">
-                        <div class="d-flex justify-content-between p-4">
-                            
-                        </div>
-                    </div>
-                    <div class="w-100 bg-white text-center p-4">
-                        <a class="btn btn-primary" href="detail.html">Event Detail</a>
-                    </div>
-                </div>
-
-                
-            </div>
-        </div>
-
+<!-- Courses Start -->
+<div class="container-fluid px-0 py-4">
+  <div class="row mx-0 justify-content-center">
+    <div class="col-lg-6">
+      <div
+        class="section-title text-center position-relative mb-4"
+        style="margin-top: 30%"
+      >
+        <h1
+          style="
+            text-align: center;
+            font-family: Comic Sans MS;
+            margin-top: 48%;
+          "
+          class="display-4"
+          id="events"
+        >
+          Department of CSIT
+        </h1>
+        <h6
+          class="d-inline-block position-relative text-secondary text-uppercase pb-2"
+        >
+          presents
+        </h6>
+        <h1
+          class="display-4"
+          style="text-align: center; font-family: Le major; color: red"
+        >
+          S<span style="text-align: center; color: silver; font-family: Zaptron"
+            >amarthya</span
+          >
+        </h1>
+      </div>
     </div>
-    <!-- Courses End -->
-    
-
-    <!-- Team Start -->
-    <div class="container-fluid py-5">
-        <div class="container py-5">
-            <div class="section-title text-center position-relative mb-5">
-
-                <h1 style=" font-family:Ink Free;" class="display-4">Meet Our Team</h1>
-            </div>
-            <div class="owl-carousel team-carousel position-relative" style="padding: 3 30px; margin:5%">
-                <div class="team-item">
-                    <img class="img-fluid w-100" src="{% static 'img/asritha.jpg' %}" alt="">
-                    <div class="bg-light text-center p-4">
-                        <h5 class="mb-3">Asritha Aravapalli</h5>
-                        <p class="mb-2">Tech & Non-Tech cheif</p>
-                        {% comment %} <div class="d-flex justify-content-center">
-                            <a class="mx-1 p-1" href="#"><i class="fab fa-twitter"></i></a>
-                            <a class="mx-1 p-1" href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a class="mx-1 p-1" href="#"><i class="fab fa-linkedin-in"></i></a>
-                            <a class="mx-1 p-1" href="#"><i class="fab fa-instagram"></i></a>
-                            
-                        </div> {% endcomment %}
-                    </div>
-                </div>
-                <div class="team-item">
-                    <img class="img-fluid w-100" src="{% static 'img/nohith.jpg' %}" alt="">
-                    <div class="bg-light text-center p-4">
-                        <h5 class="mb-3">Nohith.Borusu</h5>
-                        <p class="mb-2">HR head</p>
-                        <div class="d-flex justify-content-center">
-                            
-                            <a class="mx-1 p-1" href="https://www.linkedin.com/in/nohith-borusu/"><i class="fab fa-linkedin-in"></i></a>
-                            <a class="mx-1 p-1" href="https://instagram.com/nohith_borusu"><i class="fab fa-instagram"></i></a>
-                            
-                        </div>
-                    </div>
-                </div>
-                <div class="team-item">
-                    <img class="img-fluid w-100" src="{% static 'img/akhil.jpg' %}" alt="">
-                    <div class="bg-light text-center p-4">
-                        <h5 class="mb-3"> B. JayaAkhil</h5>
-                        <p class="mb-2">Stage management</p>
-                        <div class="d-flex justify-content-center">
-                           
-                            <a class="mx-1 p-1" href="#"><i class="fab fa-linkedin-in"></i></a>
-                            <a class="mx-1 p-1" href="https://instagram.com/stylish_akhil4505k"><i class="fab fa-instagram"></i></a>
-                            
-                        </div>
-                    </div>
-                </div>
-                
-               
-                {% comment %} <div class="team-item">
-                    <img class="img-fluid w-100" src="{% static 'img/team-1.jpg' %}" alt="">
-                    <div class="bg-light text-center p-4">
-                        <h5 class="mb-3">Instructor Name</h5>
-                        <p class="mb-2">Web Design & Development</p>
-                        <div class="d-flex justify-content-center">
-                            <a class="mx-1 p-1" href="#"><i class="fab fa-twitter"></i></a>
-                            <a class="mx-1 p-1" href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a class="mx-1 p-1" href="#"><i class="fab fa-linkedin-in"></i></a>
-                            <a class="mx-1 p-1" href="#"><i class="fab fa-instagram"></i></a>
-                            <a class="mx-1 p-1" href="#"><i class="fab fa-youtube"></i></a>
-                        </div>
-                    </div>
-                </div> {% endcomment %}
-                <div class="team-item">
-                    <img class="img-fluid w-100" src="{% static 'img/aditya.jpg' %}" alt="">
-                    <div class="bg-light text-center p-4">
-                        <h5 class="mb-3">Kadiyam baladithya</h5>
-                        <p class="mb-2">Broadcasting head</p>
-                        <div class="d-flex justify-content-center">
-                            
-                            <a class="mx-1 p-1" href="https://instagram.com/justadithya_8"><i class="fab fa-instagram"></i></a>
-                            
-                        </div>
-                    </div>
-                </div>
-                <div class="team-item">
-                    <img class="img-fluid w-100" src="{% static 'img/nikita.jpg' %}" alt="">
-                    <div class="bg-light text-center p-4">
-                        <h5 class="mb-3">B.Nikitha</h5>
-                        <p class="mb-2">Hospitality</p>
-                        <div class="d-flex justify-content-center">
-                            
-                            <a class="mx-1 p-1" href="https://instagram.com/nikitha_bommineni"><i class="fab fa-instagram"></i></a>
-                            
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="team-item">
-                    <img class="img-fluid w-100" src="{% static 'img/chaitanya.jpg' %}" alt="">
-                    <div class="bg-light text-center p-4">
-                        <h5 class="mb-3">G Chaitanya Reddy</h5>
-                        <p class="mb-2">Protocol Head</p>
-                        <div class="d-flex justify-content-center">
-                            
-                            <a class="mx-1 p-1" href="https://www.linkedin.com/in/gudibandi-chaitanya-simha-reddy-67050a222/"><i class="fab fa-linkedin-in"></i></a>
-                            <a class="mx-1 p-1" href="https://instagram.com/chaitanya_reddee"><i class="fab fa-instagram"></i></a>
-                            
-                        </div>
-                    </div>
-                </div>
-                <div class="team-item">
-                    <img class="img-fluid w-100" src="{% static 'img/lalita.jpg' %}" alt="">
-                    <div class="bg-light text-center p-4">
-                        <h5 class="mb-3">Lalitha Bhogireddy</h5>
-                        <p class="mb-2">Drafting Chief</p>
-                        <div class="d-flex justify-content-center">
-                            
-                            
-                            <a class="mx-1 p-1" href="https://instagram.com/lalli_girly"><i class="fab fa-instagram"></i></a>
-                            
-                        </div>
-                    </div>
-                </div>
-                <div class="team-item">
-                    <img class="img-fluid w-100" src="{% static 'img/niranjan.png' %}" alt="">
-                    <div class="bg-light text-center p-4">
-                        <h5 class="mb-3">Niranjan sah</h5>
-                        <p class="mb-2">Web Designer</p>
-                        <div class="d-flex justify-content-center">
-                            <a class="mx-1 p-1" href="https://twitter.com/Niranjan8790"><i class="fab fa-twitter"></i></a>
-                            <a class="mx-1 p-1" href="https://www.facebook.com/niranjan8790"><i class="fab fa-facebook-f"></i></a>
-                            <a class="mx-1 p-1" href="https://www.linkedin.com/in/niranjan-sah/"><i class="fab fa-linkedin-in"></i></a>
-                            <a class="mx-1 p-1" href="https://instagram.com/_.its_.niranjan._"><i class="fab fa-instagram"></i></a>
-                            
-                        </div>
-                    </div>
-                </div>
-                <div class="team-item">
-                    <img class="img-fluid w-100" src="{% static 'img/Rohit.JPG' %}" alt="">
-                    <div class="bg-light text-center p-4">
-                        <h5 class="mb-3">Rohit Kumar</h5>
-                        <p class="mb-2">Web Designer</p>
-                        <div class="d-flex justify-content-center">
-                            
-                            <a class="mx-1 p-1" href="https://www.facebook.com/profile.php?id=100008896156056"><i class="fab fa-facebook-f"></i></a>
-                            <a class="mx-1 p-1" href="https://www.linkedin.com/in/rohit-kumar-11862a238/"><i class="fab fa-linkedin-in"></i></a>
-                            <a class="mx-1 p-1" href="https://instagram.com/unique_rohit_raj"><i class="fab fa-instagram"></i></a>
-                           
-                        </div>
-                    </div>
-                </div>
-                <div class="team-item">
-                    <img class="img-fluid w-100" src="{% static 'img/boss.png' %}" alt="">
-                    <div class="bg-light text-center p-4">
-                        <h5 class="mb-3">Snigdha Sindhusha Mantha</h5>
-                        <p class="mb-2">Designing Head</p>
-                        <div class="d-flex justify-content-center">
-                            
-                            <a class="mx-1 p-1" href="https://www.linkedin.com/in/snigdhasindhusha-mantha-60447824b/"><i class="fab fa-linkedin-in"></i></a>
-                            <a class="mx-1 p-1" href="https://instagram.com/_.sindhusha.03._"><i class="fab fa-instagram"></i></a>
-                            
-                        </div>
-                    </div>
-                </div>
-                
-            </div>
+  </div>
+  <div id="events" class="owl-carousel courses-carousel">
+    <div class="courses-item position-relative">
+      <img class="img-fluid" src="{% static 'img/courses-1.jpg' %}" alt="" />
+      <div class="courses-text">
+        <h4 class="text-center text-white px-3">Word Block</h4>
+        <div class="border-top w-100 mt-3">
+          <div class="d-flex justify-content-between p-4"></div>
         </div>
+        <div class="w-100 bg-white text-center p-4">
+          <a class="btn btn-primary" href="{% url 'word_blocks' %}"
+            >Event Detail</a>
+        </div>
+      </div>
     </div>
-    <!-- Team End -->
 
-
-    <!-- Testimonial Start -->
-    <div class="container-fluid bg-image py-5" style="margin: -62px 0;">
-        <div class="container py-5">
-            <div class="row align-items-center">
-                <div class="col-lg-5 mb-5 mb-lg-0">
-                    <div class="section-title position-relative mb-4">
-                        <h6 class="d-inline-block position-relative text-secondary text-uppercase pb-2">Testimonial</h6>
-                        <h1 class="display-4">What Our Teachers say</h1>
-                    </div>
-                </div>
-                <div class="col-lg-7">
-                    <div class="owl-carousel testimonial-carousel">
-                        <div class="bg-white p-5">
-                            <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
-                            <p>Department's Day is to acknowledge the hard work and contributions of the members of the department, and to show appreciation for their dedication and commitment to their job. It is also an opportunity for team members to come together and strengthen their bonds, share their achievements and challenges, and reflect on their goals for the future.</p>
-                            <div class="d-flex flex-shrink-0 align-items-center mt-4">
-                                <img class="img-fluid mr-4" src="{% static 'img/srinivas.png' %}" alt="">
-                                <div>
-                                    <h5>PVVS Srinivas</h5>
-                                    <span>Assistant professor,Department of CSIT</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="bg-white p-5">
-                            <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
-                            <p>Department's Day can also provide an opportunity for teachers to connect and collaborate with their colleagues within their department, strengthening relationships and improving communication.</p>
-                            <div class="d-flex flex-shrink-0 align-items-center mt-4">
-                                <img class="img-fluid mr-4" src="{% static 'img/hod.jpg' %}" alt="">
-                                <div>
-                                    <h5>Dr Amarendra K</h5>
-                                    <span>HOD,Department of CSIT</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <div class="courses-item position-relative">
+        <img class="img-fluid" src="{% static 'img/courses-1.jpg' %}" alt="" />
+        <div class="courses-text">
+          <h4 class="text-center text-white px-3">Code Buster</h4>
+          <div class="border-top w-100 mt-3">
+            <div class="d-flex justify-content-between p-4"></div>
+          </div>
+          <div class="w-100 bg-white text-center p-4">
+            <a class="btn btn-primary" href="{% url 'codebuster' %}">Event Detail</a>
+          </div>
         </div>
+      </div>
+    <div class="courses-item position-relative">
+      <img class="img-fluid" src="{% static 'img/courses-2.jpg' %}" alt="" />
+      <div class="courses-text">
+        <h4 class="text-center text-white px-3">Math Buzz</h4>
+        <div class="border-top w-100 mt-3">
+          <div class="d-flex justify-content-between p-4"></div>
+        </div>
+        <div class="w-100 bg-white text-center p-4">
+          <a class="btn btn-primary" href="{% url 'math_buzz' %}"
+            >Event Detail</a
+          >
+        </div>
+      </div>
     </div>
-    <!-- Testimonial Start -->
-
-
-   
-
-
-    <!-- Footer Start -->
-    <div class="container-fluid position-relative overlay-top bg-dark text-white-50 py-1" id="about">
-        <div class="" style="margin-top: 90px;">
-            <div class="container mt-5 pt-2">
-                <div class="row">
-                    <div class="col-md-6 mb-1">
-                        <a href="index.html" class="navbar-brand">
-                            <h1 class="display-4" style="color: rgba(167,0,0,1);
-                            color: linear-gradient(343deg, rgba(167,0,0,1) 21%, rgba(7,255,244,1) 100%); text-align: center; font-family:Le major;">S<span style="text-align: center; font-family:Zaptron;">amarthya</span></h1>
-                        </a>
-                        <p class="m-0" style="color: azure;">National level techno-cultural fest organized by the Dept of CS-IT . It is a two-day festival filled with activities, workshops and cultural activities, which focuses on testing the potential of students in both cultural and academic events which helps in improving their individual skills and bring an exposure.</p>
-
-
-                    </div>
-                    <div class="col-md-6 mb-1">
-                        <h3 class="text-white mb-4"></h3>
-                        <div class="w-100">
-                        </div>
-                    </div>
-                </div>
-                <hr style="background-color: azure;">
-                <div class="row">
-                    <div class="col-md-6 mb-1">
-                        <h3 class="text-white mb-1">Get In Touch</h3>
-                        <p><i class="fa fa-map-marker-alt mr-1"></i>Green Fields, Vaddeswaram, Andhra Pradesh 522302</p>
-                        <p><i class="fa fa-phone-alt mr-1"></i>+ 86453 50200</p>
-                        <p><i class="fa fa-envelope mr-1"></i>@kluniversity.in</p>
-                        <div class="d-flex justify-content-start mt-1">
-                            <a target="_blank" class="text-white mr-3" href="https://twitter.com/klcsit"><i class="fab fa-2x fa-twitter"></i></a>
-                            <a target="_blank" class="text-white mr-3" href="https://www.facebook.com/kl.csit"><i class="fab fa-2x fa-facebook-f"></i></a>
-                            <a target="_blank" class="text-white mr-3" href="#"><i class="fab fa-2x fa-linkedin-in"></i></a>
-                            <a target="_blank" class="text-white" href="https://www.instagram.com/kl.csit/"><i class="fab fa-2x fa-instagram"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-md-4 mb-1">
-                        <h3 class="text-white mb-1">Quick Links</h3>
-                        <div class="d-flex flex-column justify-content-start">
-                            <a class="text-white-50 mb-1" href="{%  url 'home' %}"><i class="fa fa-angle-right mr-2"></i>Home</a>
-                            <a class="text-white-50 mb-1" href="#events"><i class="fa fa-angle-right mr-2"></i>Events</a>
-                            <a class="text-white-50 mb-1" href="{% url 'Gallery' %}"><i class="fa fa-angle-right mr-2"></i>Gallery</a>
-                            <a class="text-white-50 mb-1" href="{%  url 'about' %}"><i class="fa fa-angle-right mr-2"></i>About</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <div class="courses-item position-relative">
+      <img class="img-fluid" src="{% static 'img/courses-3.jpg' %}" alt="" />
+      <div class="courses-text">
+        <h4 class="text-center text-white px-3">Jam</h4>
+        <div class="border-top w-100 mt-3"></div>
+        <div class="w-100 bg-white text-center p-4">
+          <a class="btn btn-primary" href="{% url 'jam' %}">Event Detail</a>
         </div>
-        <div class="px-2 py-0" style="background-color: brown;">
-            <center>
-                <p class="m-0">Copyright &copy; <a class="text-white" href="#">SAMARTHYA</a>. All Rights Reserved.
-                </p>
-            </center>
-        </div>
+      </div>
     </div>
-    <!-- Footer End -->
+    <div class="courses-item position-relative">
+      <img class="img-fluid" src="{% static 'img/courses-4.jpg' %}" alt="" />
+      <div class="courses-text">
+        <h4 class="text-center text-white px-3">Soduko</h4>
+        <div class="border-top w-100 mt-3">
+          <div class="d-flex justify-content-between p-4"></div>
+        </div>
+        <div class="w-100 bg-white text-center p-4">
+          <a class="btn btn-primary" href="detail.html">Event Detail</a>
+        </div>
+      </div>
+    </div>
+    <div class="courses-item position-relative">
+      <img class="img-fluid" src="{% static 'img/courses-5.jpg' %}" alt="" />
+      <div class="courses-text">
+        <h4 class="text-center text-white px-3">Smash Karts</h4>
+        <div class="border-top w-100 mt-3">
+          <div class="d-flex justify-content-between p-4"></div>
+        </div>
+        <div class="w-100 bg-white text-center p-4">
+          <a class="btn btn-primary" href="detail.html">Event Detail</a>
+        </div>
+      </div>
+    </div>
+    <div class="courses-item position-relative">
+      <img class="img-fluid" src="{% static 'img/courses-6.jpg' %}" alt="" />
+      <div class="courses-text">
+        <h4 class="text-center text-white px-3">Arrow Pulling (TUG of WAR)</h4>
+        <div class="border-top w-100 mt-3">
+          <div class="d-flex justify-content-between p-4"></div>
+        </div>
+        <div class="w-100 bg-white text-center p-4">
+          <a class="btn btn-primary" href="detail.html">Event Detail</a>
+        </div>
+      </div>
+    </div>
 
+    <div class="courses-item position-relative">
+      <img class="img-fluid" src="{% static 'img/courses-6.jpg' %}" alt="" />
+      <div class="courses-text">
+        <h4 class="text-center text-white px-3">Prime Suspects</h4>
+        <div class="border-top w-100 mt-3">
+          <div class="d-flex justify-content-between p-4"></div>
+        </div>
+        <div class="w-100 bg-white text-center p-4">
+          <a class="btn btn-primary" href="detail.html">Event Detail</a>
+        </div>
+      </div>
+    </div>
 
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary rounded-0 btn-lg-square back-to-top"><i
-            class="fa fa-angle-double-up"></i></a>
+    <div class="courses-item position-relative">
+      <img class="img-fluid" src="{% static 'img/courses-6.jpg' %}" alt="" />
+      <div class="courses-text">
+        <h4 class="text-center text-white px-3">Instant Speech</h4>
+        <div class="border-top w-100 mt-3">
+          <div class="d-flex justify-content-between p-4"></div>
+        </div>
+        <div class="w-100 bg-white text-center p-4">
+          <a class="btn btn-primary" href="{% url 'instant_speech' %}"
+            >Event Detail</a
+          >
+        </div>
+      </div>
+    </div>
 
+    <div class="courses-item position-relative">
+      <img class="img-fluid" src="{% static 'img/courses-6.jpg' %}" alt="" />
+      <div class="courses-text">
+        <h4 class="text-center text-white px-3">Pass the bomb</h4>
+        <div class="border-top w-100 mt-3">
+          <div class="d-flex justify-content-between p-4"></div>
+        </div>
+        <div class="w-100 bg-white text-center p-4">
+          <a class="btn btn-primary" href="detail.html">Event Detail</a>
+        </div>
+      </div>
+    </div>
 
-    <!-- JavaScript Libraries -->
-    {% block scriptindex %}
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-    <script src="{% static 'lib/easing/easing.min.js' %}"></script>
-    <script src="{% static 'lib/waypoints/waypoints.min.js' %}"></script>
-    <script src="{% static 'lib/counterup/counterup.min.js' %}"></script>
-    <script src="{% static 'lib/owlcarousel/owl.carousel.min.js' %}"></script>
-    {% endblock scriptindex %}
+    <div class="courses-item position-relative">
+      <img class="img-fluid" src="{% static 'img/courses-6.jpg' %}" alt="" />
+      <div class="courses-text">
+        <h4 class="text-center text-white px-3">
+          Skill Development Project -4
+        </h4>
+        <div class="border-top w-100 mt-3">
+          <div class="d-flex justify-content-between p-4"></div>
+        </div>
+        <div class="w-100 bg-white text-center p-4">
+          <a class="btn btn-primary" href="detail.html">Event Detail</a>
+        </div>
+      </div>
+    </div>
 
-    <!-- Template Javascript -->
+    <div class="courses-item position-relative">
+      <img class="img-fluid" src="{% static 'img/courses-6.jpg' %}" alt="" />
+      <div class="courses-text">
+        <h4 class="text-center text-white px-3">Project Based Learning -2</h4>
+        <div class="border-top w-100 mt-3">
+          <div class="d-flex justify-content-between p-4"></div>
+        </div>
+        <div class="w-100 bg-white text-center p-4">
+          <a class="btn btn-primary" href="detail.html">Event Detail</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Courses End -->
 
-    <script>
-        var countDownDate = new Date("Feb 24,2023 00:00:00").getTime();
-        var x = setInterval(function () {
-            var now = new Date().getTime();
-            var distance = countDownDate - now;
-            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-            document.getElementById("days").innerHTML = days;
-            document.getElementById("hours").innerHTML = hours;
-            document.getElementById("minutes").innerHTML = minutes;
-            document.getElementById("seconds").innerHTML = seconds;
+<!-- Team Start -->
+<div class="container-fluid py-5">
+  <div class="container py-5">
+    <div class="section-title text-center position-relative mb-5">
+      <h1 style="font-family: Ink Free" class="display-4">Meet Our Team</h1>
+    </div>
+    <div
+      class="owl-carousel team-carousel position-relative"
+      style="padding: 3 30px; margin: 5%"
+    >
+      <div class="team-item">
+        <img
+          class="img-fluid w-100"
+          src="{% static 'img/asritha.jpg' %}"
+          alt=""
+        />
+        <div class="bg-light text-center p-4">
+          <h5 class="mb-3">Asritha Aravapalli</h5>
+          <p class="mb-2">Tech & Non-Tech cheif</p>
+          {% comment %}
+          <div class="d-flex justify-content-center">
+            <a class="mx-1 p-1" href="#"><i class="fab fa-twitter"></i></a>
+            <a class="mx-1 p-1" href="#"><i class="fab fa-facebook-f"></i></a>
+            <a class="mx-1 p-1" href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a class="mx-1 p-1" href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+          {% endcomment %}
+        </div>
+      </div>
+      <div class="team-item">
+        <img
+          class="img-fluid w-100"
+          src="{% static 'img/nohith.jpg' %}"
+          alt=""
+        />
+        <div class="bg-light text-center p-4">
+          <h5 class="mb-3">Nohith.Borusu</h5>
+          <p class="mb-2">HR head</p>
+          <div class="d-flex justify-content-center">
+            <a
+              class="mx-1 p-1"
+              href="https://www.linkedin.com/in/nohith-borusu/"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+            <a class="mx-1 p-1" href="https://instagram.com/nohith_borusu"
+              ><i class="fab fa-instagram"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+      <div class="team-item">
+        <img
+          class="img-fluid w-100"
+          src="{% static 'img/akhil.jpg' %}"
+          alt=""
+        />
+        <div class="bg-light text-center p-4">
+          <h5 class="mb-3">B. JayaAkhil</h5>
+          <p class="mb-2">Stage management</p>
+          <div class="d-flex justify-content-center">
+            <a class="mx-1 p-1" href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a class="mx-1 p-1" href="https://instagram.com/stylish_akhil4505k"
+              ><i class="fab fa-instagram"></i
+            ></a>
+          </div>
+        </div>
+      </div>
 
+      {% comment %}
+      <div class="team-item">
+        <img
+          class="img-fluid w-100"
+          src="{% static 'img/team-1.jpg' %}"
+          alt=""
+        />
+        <div class="bg-light text-center p-4">
+          <h5 class="mb-3">Instructor Name</h5>
+          <p class="mb-2">Web Design & Development</p>
+          <div class="d-flex justify-content-center">
+            <a class="mx-1 p-1" href="#"><i class="fab fa-twitter"></i></a>
+            <a class="mx-1 p-1" href="#"><i class="fab fa-facebook-f"></i></a>
+            <a class="mx-1 p-1" href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a class="mx-1 p-1" href="#"><i class="fab fa-instagram"></i></a>
+            <a class="mx-1 p-1" href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+      {% endcomment %}
+      <div class="team-item">
+        <img
+          class="img-fluid w-100"
+          src="{% static 'img/aditya.jpg' %}"
+          alt=""
+        />
+        <div class="bg-light text-center p-4">
+          <h5 class="mb-3">Kadiyam baladithya</h5>
+          <p class="mb-2">Broadcasting head</p>
+          <div class="d-flex justify-content-center">
+            <a class="mx-1 p-1" href="https://instagram.com/justadithya_8"
+              ><i class="fab fa-instagram"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+      <div class="team-item">
+        <img
+          class="img-fluid w-100"
+          src="{% static 'img/nikita.jpg' %}"
+          alt=""
+        />
+        <div class="bg-light text-center p-4">
+          <h5 class="mb-3">B.Nikitha</h5>
+          <p class="mb-2">Hospitality</p>
+          <div class="d-flex justify-content-center">
+            <a class="mx-1 p-1" href="https://instagram.com/nikitha_bommineni"
+              ><i class="fab fa-instagram"></i
+            ></a>
+          </div>
+        </div>
+      </div>
 
+      <div class="team-item">
+        <img
+          class="img-fluid w-100"
+          src="{% static 'img/chaitanya.jpg' %}"
+          alt=""
+        />
+        <div class="bg-light text-center p-4">
+          <h5 class="mb-3">G Chaitanya Reddy</h5>
+          <p class="mb-2">Protocol Head</p>
+          <div class="d-flex justify-content-center">
+            <a
+              class="mx-1 p-1"
+              href="https://www.linkedin.com/in/gudibandi-chaitanya-simha-reddy-67050a222/"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+            <a class="mx-1 p-1" href="https://instagram.com/chaitanya_reddee"
+              ><i class="fab fa-instagram"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+      <div class="team-item">
+        <img
+          class="img-fluid w-100"
+          src="{% static 'img/lalita.jpg' %}"
+          alt=""
+        />
+        <div class="bg-light text-center p-4">
+          <h5 class="mb-3">Lalitha Bhogireddy</h5>
+          <p class="mb-2">Drafting Chief</p>
+          <div class="d-flex justify-content-center">
+            <a class="mx-1 p-1" href="https://instagram.com/lalli_girly"
+              ><i class="fab fa-instagram"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+      <div class="team-item">
+        <img
+          class="img-fluid w-100"
+          src="{% static 'img/niranjan.png' %}"
+          alt=""
+        />
+        <div class="bg-light text-center p-4">
+          <h5 class="mb-3">Niranjan sah</h5>
+          <p class="mb-2">Web Designer</p>
+          <div class="d-flex justify-content-center">
+            <a class="mx-1 p-1" href="https://twitter.com/Niranjan8790"
+              ><i class="fab fa-twitter"></i
+            ></a>
+            <a class="mx-1 p-1" href="https://www.facebook.com/niranjan8790"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a class="mx-1 p-1" href="https://www.linkedin.com/in/niranjan-sah/"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+            <a class="mx-1 p-1" href="https://instagram.com/_.its_.niranjan._"
+              ><i class="fab fa-instagram"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+      <div class="team-item">
+        <img
+          class="img-fluid w-100"
+          src="{% static 'img/Rohit.JPG' %}"
+          alt=""
+        />
+        <div class="bg-light text-center p-4">
+          <h5 class="mb-3">Rohit Kumar</h5>
+          <p class="mb-2">Web Designer</p>
+          <div class="d-flex justify-content-center">
+            <a
+              class="mx-1 p-1"
+              href="https://www.facebook.com/profile.php?id=100008896156056"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a
+              class="mx-1 p-1"
+              href="https://www.linkedin.com/in/rohit-kumar-11862a238/"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+            <a class="mx-1 p-1" href="https://instagram.com/unique_rohit_raj"
+              ><i class="fab fa-instagram"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+      <div class="team-item">
+        <img class="img-fluid w-100" src="{% static 'img/boss.png' %}" alt="" />
+        <div class="bg-light text-center p-4">
+          <h5 class="mb-3">Snigdha Sindhusha Mantha</h5>
+          <p class="mb-2">Designing Head</p>
+          <div class="d-flex justify-content-center">
+            <a
+              class="mx-1 p-1"
+              href="https://www.linkedin.com/in/snigdhasindhusha-mantha-60447824b/"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+            <a class="mx-1 p-1" href="https://instagram.com/_.sindhusha.03._"
+              ><i class="fab fa-instagram"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Team End -->
 
-        }, 1000)
-    </script>
-    {% comment %} <script> {% endcomment %}
-        {% comment %} function myFunction() {
-           var element = document.body;
-           element.classList.toggle("dark-mode");
-        }
-        </script>  {% endcomment %}
+<!-- Testimonial Start -->
+<div class="container-fluid bg-image py-5" style="margin: -62px 0">
+  <div class="container py-5">
+    <div class="row align-items-center">
+      <div class="col-lg-5 mb-5 mb-lg-0">
+        <div class="section-title position-relative mb-4">
+          <h6
+            class="d-inline-block position-relative text-secondary text-uppercase pb-2"
+          >
+            Testimonial
+          </h6>
+          <h1 class="display-4">What Our Teachers say</h1>
+        </div>
+      </div>
+      <div class="col-lg-7">
+        <div class="owl-carousel testimonial-carousel">
+          <div class="bg-white p-5">
+            <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
+            <p>
+              Sir has instilled discipline and the value of respect in all of
+              us. Sir has worked tirelessly every day to ensure our success. Too
+              often, we rush through the ‘ropes of life,' oblivious to the
+              importance of taking the time to express our gratitude and genuine
+              appreciation for the support sir so generously provides for our
+              dept. Sir has also helped in development of our interpersonal
+              skills, communication skills, writing skills, overall gestures,
+              and presentation skills
+            </p>
+            <div class="d-flex flex-shrink-0 align-items-center mt-4">
+              <img
+                class="img-fluid mr-4"
+                src="{% static 'img/csit web resource/hod.jpg' %}"
+                alt=""
+              />
+              <div>
+                <h5>Dr Amarendra K</h5>
+                <span>HOD,Department of CSIT</span>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white p-5">
+            <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
+            <p>
+              Sir has done a pretty good job of preparing us students for the
+              outside world. Sir resembles a mentor and serves as an excellent
+              role model for students. Sir has always thought us to work hard
+              without compromising on hard work and small issues.
+            </p>
+            <div class="d-flex flex-shrink-0 align-items-center mt-4">
+              <img
+                class="img-fluid mr-4"
+                src="{% static 'img/csit web resource/deputy.jpg' %}"
+                alt=""
+              />
+              <div>
+                <h5>DR.GANGA RAMAKOTESWARA RAO</h5>
+                <span>Deputy HOD,Department of CSIT</span>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white p-5">
+            <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
+            <p>
+              A dedicated and hardworking professor who inspires students with
+              his passion for education and for the course material. He
+              constantly renews himself as a professional on his quest to
+              provide students with highest quality of education possible. He is
+              a professor who has no fear of learning new teaching strategies or
+              incorporating new technologies into lessons.
+            </p>
+            <div class="d-flex flex-shrink-0 align-items-center mt-4">
+              <img
+                class="img-fluid mr-4"
+                src="{% static 'img/csit web resource/harsha sir.jpg' %}"
+                alt=""
+              />
+              <div>
+                <h5>DR. SANDA SRI HARSHA</h5>
+                <span>Associate professor,Department of CSIT</span>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white p-5">
+            <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
+            <p>
+              A professor who focuses on shared decision making and team work as
+              well as on community buildings. She conveys the sense of
+              leadership to students by providing opportunities for each of them
+              to assume leadership goals.
+            </p>
+            <div class="d-flex flex-shrink-0 align-items-center mt-4">
+              <img
+                class="img-fluid mr-4"
+                src="{% static 'img/csit web resource/jyoti mam.jpg' %}"
+                alt=""
+              />
+              <div>
+                <h5>Dr.N.M Jyoti</h5>
+                <span>Associate professor,Department of CSIT</span>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white p-5">
+            <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
+            <p>
+              A professor who is helpful in all organizational issues and has
+              preparedness for each day. His communication skills are exemplary
+              whether he is speaking with an administrator, one of his student
+              or a colleague.
+            </p>
+            <div class="d-flex flex-shrink-0 align-items-center mt-4">
+              <img
+                class="img-fluid mr-4"
+                src="{% static 'img/csit web resource/srinivas.png' %}"
+                alt=""
+              />
+              <div>
+                <h5>Dr.PVVS Srinivas</h5>
+                <span>Assistant professor,Department of CSIT</span>
+              </div>
+            </div>
+          </div>
 
-    <script> 
-        const toggle = document.getElementById('toggle');
-const body = document.body;
+          <div class="bg-white p-5">
+            <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
+            <p>
+              A motivator. An inspiration. These two qualities are just a few of
+              the many you show every day with all your students. Mam has taught
+              us that we are capable of much more than we are, or others
+              believed in.
+            </p>
+            <div class="d-flex flex-shrink-0 align-items-center mt-4">
+              <img
+                class="img-fluid mr-4"
+                src="{% static 'img/csit web resource/anjali mam.jpg' %}"
+                alt=""
+              />
+              <div>
+                <h5>Dr.Anjali Devi sharma</h5>
+                <span>Assistant professor,Department of CSIT</span>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white p-5">
+            <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
+            <p>
+              Sir has instilled in us the importance of working hard and not
+              compromising on small matters. He has always been a source of
+              inspiration to all of us. Every word spoken by sir is embraced by
+              the students.
+            </p>
+            <div class="d-flex flex-shrink-0 align-items-center mt-4">
+              <img
+                class="img-fluid mr-4"
+                src="{% static 'img/csit web resource/sasank madharchod.jpg' %}"
+                alt=""
+              />
+              <div>
+                <h5>Mr.S.Sasank venkata visamsetty</h5>
+                <span>Assistant professor,Department of CSIT</span>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white p-5">
+            <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
+            <p>
+              A professor who creates a supportive and collaborative environment
+              in the classroom. Considers each student as a integral part of the
+              classroom and equally distributes the jobs to let the students
+              know that they cant rely on one student but on the entire class.
+            </p>
+            <div class="d-flex flex-shrink-0 align-items-center mt-4">
+              <img
+                class="img-fluid mr-4"
+                src="{% static 'img/csit web resource/krishna sir.jpg' %}"
+                alt=""
+              />
+              <div>
+                <h5>Mr.Vijaya krishna sonthi</h5>
+                <span>Assistant professor,Department of CSIT</span>
+              </div>
+            </div>
+          </div>
 
-toggle.addEventListener('input', (e) => {
-  const isChecked = e.target.checked;
-  
-  if(isChecked) {
-    body.classList.add('dark-theme');
-  } else {
-    body.classList.remove('dark-theme');
-  }
-});
+          <div class="bg-white p-5">
+            <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
+            <p>
+              A warm enthusiastic and accessible professor of the department who
+              is approachable not only for the students of the same department
+              but also for everyone in the other departments. Professor who
+              posses good listening skills and take time out of their
+              way-too-busy schedules for anyone who needs her help.
+            </p>
+            <div class="d-flex flex-shrink-0 align-items-center mt-4">
+              <img
+                class="img-fluid mr-4"
+                src="{% static 'img/csit web resource/divya mam.jpg' %}"
+                alt=""
+              />
+              <div>
+                <h5>Mrs.Divya Mohan</h5>
+                <span>Assistant professor,Department of CSIT</span>
+              </div>
+            </div>
+          </div>
 
-</script> 
-    <script src="{% static 'js/main.js' %}"></script>
+          <div class="bg-white p-5">
+            <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
+            <p>
+              A selfless teacher is always willing to go the extra mile for
+              their students to ensure that they do their best. This may include
+              after-school hours, going over the same thing multiple times,
+              tutoring and extra classes, taking on some expenses themselves and
+              so much more.
+            </p>
+            <div class="d-flex flex-shrink-0 align-items-center mt-4">
+              <img
+                class="img-fluid mr-4"
+                src="{% static 'img/csit web resource/aashish sir.jpg' %}"
+                alt=""
+              />
+              <div>
+                <h5>Mr.Ashis Kumar ratha</h5>
+                <span>Assistant professor,Department of CSIT</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white p-5">
+            <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
+            <p>
+              An optimistic teacher always has a positive attitude towards their
+              students and teaching. He is like a ray of sunshine and light up
+              any classroom he enters. This attitude is felt by their students
+              and creates the perfect atmosphere for learning.
+            </p>
+            <div class="d-flex flex-shrink-0 align-items-center mt-4">
+              <img
+                class="img-fluid mr-4"
+                src="{% static 'img/csit web resource/benarji sir.jpg' %}"
+                alt=""
+              />
+              <div>
+                <h5>Mr.BSN Benarji</h5>
+                <span>Assistant professor,Department of CSIT</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white p-5">
+            <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
+            <p>
+              A competent teacher possesses all the required skills and
+              abilities needed to help the students to learn and develop. This
+              is good to use for a professor who may not be the students
+              favorite but still has had a noticeable impact on them.
+            </p>
+            <div class="d-flex flex-shrink-0 align-items-center mt-4">
+              <img
+                class="img-fluid mr-4"
+                src="{% static 'img/csit web resource/sarvanan sir.jpg' %}"
+                alt=""
+              />
+              <div>
+                <h5>Mr.Saravanan Subramani</h5>
+                <span>Assistant professor,Department of CSIT</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white p-5">
+            <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
+            <p>
+              Sir allows everyone to speak their mind and share their opinions.
+              This way students learn how to express their feelings along with
+              how to respect and listen to others. He always finds a way to
+              change the atmosphere and make sure the students leave the
+              classroom having learned something.
+            </p>
+            <div class="d-flex flex-shrink-0 align-items-center mt-4">
+              <img
+                class="img-fluid mr-4"
+                src="{% static 'img/csit web resource/sreekanth sir.jpg' %}"
+                alt=""
+              />
+              <div>
+                <h5>Mr.Kavuri Sreekanth</h5>
+                <span>Assistant professor,Department of CSIT</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white p-5">
+            <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
+            <p>
+              A humble and supportive professor of the department who realizes
+              that expectations she has for the students greatly affect their
+              achievements and finds new ways to present material to make sure
+              that every student understands the key concepts.
+            </p>
+            <div class="d-flex flex-shrink-0 align-items-center mt-4">
+              <img
+                class="img-fluid mr-4"
+                src="{% static 'img/csit web resource/kreeti mam.jpg' %}"
+                alt=""
+              />
+              <div>
+                <h5>Mrs.Keerthi Samhitha</h5>
+                <span>Assistant professor,Department of CSIT</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white p-5">
+            <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
+            <p>
+              An energetic and interactive who goes beyond the call of duty. He
+              not only mold minds but establishes strong connections and
+              communicates with students of the most diverse personalities. He
+              is up to date with current trends to engage students and keep them
+              interested.
+            </p>
+            <div class="d-flex flex-shrink-0 align-items-center mt-4">
+              <img
+                class="img-fluid mr-4"
+                src="{% static 'img/csit web resource/vikram sir.jpg' %}"
+                alt=""
+              />
+              <div>
+                <h5>Mr.P.Vikram</h5>
+                <span>Assistant professor,Department of CSIT</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white p-5">
+            <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
+            <p>
+              A flexible professor is one who can adapt to an unforeseen
+              circumstance gracefully. This is one of the best words to describe
+              him as he can handle pressure well and can adjust where it is
+              needed to suit the needs of students who may be lagging.
+            </p>
+            <div class="d-flex flex-shrink-0 align-items-center mt-4">
+              <img
+                class="img-fluid mr-4"
+                src="{% static 'img/csit web resource/.jpg' %}"
+                alt=""
+              />
+              <div>
+                <h5>DR.KADIRAVAN</h5>
+                <span>Assistant professor,Department of CSIT</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Testimonial Start -->
+
+<!-- Footer Start -->
+<div
+  class="container-fluid position-relative overlay-top bg-dark text-white-50 py-1"
+  id="about"
+>
+  <div class="" style="margin-top: 90px">
+    <div class="container mt-5 pt-2">
+      <div class="row">
+        <div class="col-md-6 mb-1">
+          <a href="index.html" class="navbar-brand">
+            <h1
+              class="display-4"
+              style="
+                color: rgba(167, 0, 0, 1);
+                color: linear-gradient(
+                  343deg,
+                  rgba(167, 0, 0, 1) 21%,
+                  rgba(7, 255, 244, 1) 100%
+                );
+                text-align: center;
+                font-family: Le major;
+              "
+            >
+              S<span style="text-align: center; font-family: Zaptron"
+                >amarthya</span
+              >
+            </h1>
+          </a>
+          <p class="m-0" style="color: azure">
+            National level techno-cultural fest organized by the Dept of CS-IT .
+            It is a two-day festival filled with activities, workshops and
+            cultural activities, which focuses on testing the potential of
+            students in both cultural and academic events which helps in
+            improving their individual skills and bring an exposure.
+          </p>
+        </div>
+        <div class="col-md-6 mb-1">
+          <h3 class="text-white mb-4"></h3>
+          <div class="w-100"></div>
+        </div>
+      </div>
+      <hr style="background-color: azure" />
+      <div class="row">
+        <div class="col-md-6 mb-1">
+          <h3 class="text-white mb-1">Get In Touch</h3>
+          <p>
+            <i class="fa fa-map-marker-alt mr-1"></i>Green Fields, Vaddeswaram,
+            Andhra Pradesh 522302
+          </p>
+          <p><i class="fa fa-phone-alt mr-1"></i>+ 86453 50200</p>
+          <p><i class="fa fa-envelope mr-1"></i>@kluniversity.in</p>
+          <div class="d-flex justify-content-start mt-1">
+            <a
+              target="_blank"
+              class="text-white mr-3"
+              href="https://twitter.com/klcsit"
+              ><i class="fab fa-2x fa-twitter"></i
+            ></a>
+            <a
+              target="_blank"
+              class="text-white mr-3"
+              href="https://www.facebook.com/kl.csit"
+              ><i class="fab fa-2x fa-facebook-f"></i
+            ></a>
+            <a target="_blank" class="text-white mr-3" href="#"
+              ><i class="fab fa-2x fa-linkedin-in"></i
+            ></a>
+            <a
+              target="_blank"
+              class="text-white"
+              href="https://www.instagram.com/kl.csit/"
+              ><i class="fab fa-2x fa-instagram"></i
+            ></a>
+          </div>
+        </div>
+        <div class="col-md-4 mb-1">
+          <h3 class="text-white mb-1">Quick Links</h3>
+          <div class="d-flex flex-column justify-content-start">
+            <a class="text-white-50 mb-1" href="{%  url 'home' %}"
+              ><i class="fa fa-angle-right mr-2"></i>Home</a
+            >
+            <a class="text-white-50 mb-1" href="#events"
+              ><i class="fa fa-angle-right mr-2"></i>Events</a
+            >
+            <a class="text-white-50 mb-1" href="{% url 'Gallery' %}"
+              ><i class="fa fa-angle-right mr-2"></i>Gallery</a
+            >
+            <a class="text-white-50 mb-1" href="{%  url 'about' %}"
+              ><i class="fa fa-angle-right mr-2"></i>About</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="px-2 py-0" style="background-color: brown">
+    <center>
+      <p class="m-0">
+        Copyright &copy; <a class="text-white" href="#">SAMARTHYA</a>. All
+        Rights Reserved.
+      </p>
+    </center>
+  </div>
+</div>
+<!-- Footer End -->
+
+<!-- Back to Top -->
+<a href="#" class="btn btn-lg btn-primary rounded-0 btn-lg-square back-to-top"
+  ><i class="fa fa-angle-double-up"></i
+></a>
+
+<!-- JavaScript Libraries -->
+{% block scriptindex %}
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+<script src="{% static 'lib/easing/easing.min.js' %}"></script>
+<script src="{% static 'lib/waypoints/waypoints.min.js' %}"></script>
+<script src="{% static 'lib/counterup/counterup.min.js' %}"></script>
+<script src="{% static 'lib/owlcarousel/owl.carousel.min.js' %}"></script>
+{% endblock scriptindex %}
+
+<!-- Template Javascript -->
+
+<script>
+  var countDownDate = new Date("Feb 24,2023 00:00:00").getTime();
+  var x = setInterval(function () {
+    var now = new Date().getTime();
+    var distance = countDownDate - now;
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor(
+      (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+    );
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    document.getElementById("days").innerHTML = days;
+    document.getElementById("hours").innerHTML = hours;
+    document.getElementById("minutes").innerHTML = minutes;
+    document.getElementById("seconds").innerHTML = seconds;
+  }, 1000);
+</script>
+{% comment %}
+<script>
+  {% endcomment %}
+         {% comment %} function myFunction() {
+            var element = document.body;
+            element.classList.toggle("dark-mode");
+         }
+</script>
+{% endcomment %}
+
+<script>
+  const toggle = document.getElementById("toggle");
+  const body = document.body;
+
+  toggle.addEventListener("input", (e) => {
+    const isChecked = e.target.checked;
+
+    if (isChecked) {
+      body.classList.add("dark-theme");
+    } else {
+      body.classList.remove("dark-theme");
+    }
+  });
+</script>
+<script src="{% static 'js/main.js' %}"></script>
 {% endblock %}

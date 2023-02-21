@@ -9942,12 +9942,12 @@ h6,
 }
 
 .jumbotron {
-  background: url(../img/concert.jpg), no-repeat center center;
+  background: url(../img/samarthya_cover.jpg), no-repeat center center;
   background-size: cover;
 }
 
 .jumbotron.page-header {
-  background: url(../img/page-header.jpg), no-repeat center center;
+  background: no-repeat center center;
   background-size: cover;
 }
 

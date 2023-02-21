@@ -5,4 +5,11 @@ from django.contrib.auth.models import User
 class payments(models.Model):
     user=models.OneToOneField(User, on_delete=models.CASCADE)
     paid_unpaid=models.BooleanField(default=False)
+    # text=models.CharField(max_length=10)
     
+    
+class payment(models.Model):
+    user=models.OneToOneField(User, on_delete=models.CASCADE)
+    paid_unpaid=models.BooleanField(default=False)
+    text=models.CharField(max_length=10)
+        
