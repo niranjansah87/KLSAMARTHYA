@@ -1,0 +1,274 @@
+{% extends "base.html" %} {% block content %} {% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.4/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.css"
+    />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <link
+      href="{% static 'lib/owlcarousel/assets/owl.carousel.min.css' %}"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <title>KL CSIT image Gallery</title>
+    <style>
+      .jumbotron {
+        text-align: center;
+        padding: 20px;
+        margin: 10px 0;
+      }
+
+      .gallery {
+        padding: 40px;
+      }
+
+      .gallery img {
+        width: 100%;
+        border-radius: 0;
+        position: relative;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <div class="container-fluid">
+      <div class="jumbotron">
+        <h1>CSIT Image Gallery</h1>
+      </div>
+
+      <div class="row gallery">
+        <div style="height: 35vh;
+        " class="col-sm-6 col-md-2 col-lg-3">
+          <a
+            href="#">
+            <img
+              class="img-fluid"
+              src="{% static 'img\gallery\1.JPG' %}"
+            />
+          </a>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <a
+            href="#">
+            <img
+              class="img-fluid"
+              src="{% static 'img\gallery\2.jpg' %}"
+            />
+          </a>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <a
+            href="#">
+            <img
+              class="img-fluid"
+              src="{% static 'img\gallery\3.jpg' %}"
+            />
+          </a>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <a
+            href="#"
+          >
+            <img
+              class="img-fluid"
+              src="{% static 'img\gallery\4.jpg' %}"
+            />
+          </a>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <a
+            href="#"
+          >
+            <img
+              class="img-fluid"
+              src="{% static 'img\gallery\5.JPG' %}"
+            />
+          </a>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <a
+            href="#"
+          >
+            <img
+              class="img-fluid"
+              src="{% static 'img\gallery\6.JPG' %}"
+            />
+          </a>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <a
+            href="#"
+          >
+            <img
+              class="img-fluid"
+              src="{% static 'img\gallery\7.JPG' %}"
+            />
+          </a>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <a
+            href="#"
+          >
+            <img
+              class="img-fluid"
+              src="{% static 'img\gallery\8.JPG' %}"
+            />
+          </a>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <a
+            href="#"
+          >
+            <img
+              class="img-fluid"
+              src="{% static 'img\gallery\9.png' %}"
+            />
+          </a>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <a
+            href="https://drive.google.com/file/d/1Q3u4Cx0zQdlOXIDb4LIQSJPSGXhHItdZ/view?usp=share_link"
+          >
+            <img
+              class="img-fluid"
+              src="{% static 'img\gallery\10.JPG' %}"
+            />
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Start -->
+    <div
+      class="container-fluid position-relative overlay-top bg-dark text-white-50 py-1"
+      id="about"
+    >
+      <div class="" style="margin-top: 90px">
+        <div class="container mt-5 pt-2">
+          <div class="row">
+            <div class="col-md-6 mb-1">
+              <a href="index.html" class="navbar-brand">
+                <h1
+                  class="display-4"
+                  style="
+                    color: rgba(161, 204, 201, 1);
+                    
+                    text-align: center;
+                    font-family: Le major;
+                  "
+                >
+                  S<span style="text-align: center; font-family: Zaptron"
+                    >amarthya</span
+                  >
+                </h1>
+              </a>
+              {% comment %} <p style="color: red;" class="m-0">
+                National level techno-cultural fest organized by the Dept of CS-IT . 
+              </p>
+            </div> {% endcomment %}
+            <div class="col-md-6 mb-1">
+              <h3 class="text-white mb-4"></h3>
+              <div class="w-100"></div>
+            </div>
+          </div>
+          <hr style="background-color: azure" />
+          <div class="row">
+            <div class="col-md-6 mb-1">
+              <h3 class="text-white mb-1">Get In Touch</h3>
+              <p>
+                <i class="fa fa-map-marker-alt mr-1"></i>Green Fields,
+                Vaddeswaram, Andhra Pradesh 522302
+              </p>
+              <p><i class="fa fa-phone-alt mr-1"></i>+ 86453 50200</p>
+              <p><i class="fa fa-envelope mr-1"></i>@kluniversity.in</p>
+              <div class="d-flex justify-content-start mt-1">
+                <a target="_blank" class="text-white mr-3" href="https://twitter.com/klcsit"
+                  ><i class="fab fa-2x fa-twitter"></i
+                ></a>
+                <a
+                target="_blank" class="text-white mr-3"
+                  href="https://www.facebook.com/kl.csit"
+                  ><i class="fab fa-2x fa-facebook-f"></i
+                ></a>
+                <a target="_blank" class="text-white mr-3" href="#"
+                  ><i class="fab fa-2x fa-linkedin-in"></i
+                ></a>
+                <a target="_blank" class="text-white" href="https://www.instagram.com/kl.csit/"
+                  ><i class="fab fa-2x fa-instagram"></i
+                ></a>
+              </div>
+            </div>
+            <div class="col-md-4 mb-1">
+              <h3 class="text-white mb-1">Quick Links</h3>
+              <div class="d-flex flex-column justify-content-start">
+                <a class="text-white-50 mb-1" href="{% url 'home' %}"
+                  ><i class="fa fa-angle-right mr-2"></i>Home</a
+                >
+                <a class="text-white-50 mb-1" href="{% url 'home' %}"
+                  ><i class="fa fa-angle-right mr-2"></i>Events</a
+                >
+                <a class="text-white-50 mb-1" href="{% url 'Gallery' %}"
+                  ><i class="fa fa-angle-right mr-2"></i>Gallery</a
+                >
+                <a class="text-white-50 mb-1" href="{% url 'home' %}"
+                  ><i class="fa fa-angle-right mr-2"></i>About</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="px-2 py-0" style="background-color: brown">
+        <center>
+          <p class="m-0">
+            Copyright &copy; <a class="text-white" href="#">SAMARTHYA</a>. All
+            Rights Reserved.
+          </p>
+        </center>
+      </div>
+    </div>
+    <!-- Footer End -->
+
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary rounded-0 btn-lg-square back-to-top"><i
+      class="fa fa-angle-double-up"></i></a>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.js"></script>
+    <script>
+      baguetteBox.run(".gallery", {
+        animation: "slideIn",
+      });
+    </script>
+  </body>
+
+  <script>
+    const toggle = document.getElementById("toggle");
+    const body = document.body;
+
+    toggle.addEventListener("input", (e) => {
+      const isChecked = e.target.checked;
+
+      if (isChecked) {
+        body.classList.add("dark-theme");
+      } else {
+        body.classList.remove("dark-theme");
+      }
+    });
+  </script>
+</html>
+{% endblock %}

@@ -1,0 +1,183 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Samarthya</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      href="{% static 'images/icons/favicon.ico' %}"
+    />
+    <!--===============================================================================================-->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}"
+    />
+    <!--===============================================================================================-->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'fonts/font-awesome-4.7.0/css/font-awesome.min.css' %}"
+    />
+    <!--===============================================================================================-->
+    <link
+      rel="{% static 'stylesheet"
+      type="text/css"
+      href="fonts/Linearicons-Free-v1.0.0/icon-font.min.css' %}"
+    />
+    <!--===============================================================================================-->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'vendor/animate/animate.css' %}"
+    />
+    <!--===============================================================================================-->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'vendor/css-hamburgers/hamburgers.min.css' %}"
+    />
+    <!--===============================================================================================-->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'vendor/animsition/css/animsition.min.css' %}"
+    />
+    <!--===============================================================================================-->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'vendor/select2/select2.min.css' %}"
+    />
+    <!--===============================================================================================-->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'vendor/daterangepicker/daterangepicker.css' %}"
+    />
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/util.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}" />
+    <!--===============================================================================================-->
+    {% block csssignup %}
+    {% endblock csssignup %}
+    {% block indexcss %}{% endblock indexcss %}
+  </head>
+  <body>
+
+        <!-- Topbar Start -->
+        <div style="height: 37px; " class="container-fluid bg-dark">
+          <div class="row py-1 px-lg-3">
+              <div class="col-lg-6 text-center text-lg-left mb-2 mb-lg-0">
+                  <div class="d-inline-flex align-items-center text-white">
+                      <small><i class="fa fa-phone-alt mr-2"></i>+ 86453 50200</small>
+                      <small class="px-3">|</small>
+                      <small><i class="fa fa-envelope mr-2"></i>klsamarthya@kluniversity.in</small>
+                  </div>
+              </div>
+              {% if request.resolver_match.url_name != 'profile' %}
+                      <span>
+                          <div class="toggle">
+                              <input type="checkbox" id="toggle" />
+                              <label for="toggle"></label>
+                          </div> 
+                          
+                      </span> 
+              {% endif %}
+                  
+                  
+              
+              <div class="col-lg-5 text-center text-lg-right">
+                  <div class="d-inline-flex align-items-center">
+                      <a target="_blank" class="text-white px-2" href="https://www.facebook.com/kl.csit">
+                          <i class="fab fa-facebook-f"></i>
+                      </a>
+                      <a target="_blank" class="text-white px-2" href="https://twitter.com/klcsit">
+                          <i class="fab fa-twitter"></i>
+                      </a>
+                      <a target="_blank" class="text-white px-2" href="">
+                          <i class="fab fa-linkedin-in"></i>
+                      </a>
+                      <a target="_blank" class="text-white px-2" href="https://www.instagram.com/kl.samarthya/">
+                          <i class="fab fa-instagram"></i>
+                      </a>
+                      <a class="text-white pl-2" href="">
+                          <i class="fab fa-youtube"></i>
+                      </a>
+  
+                     
+                      {% comment %} <button id="toggle" onclick="myFunction()">Toggle dark mode</button>  {% endcomment %}
+                      
+                  </div>
+              </div>
+          </div>
+      </div>
+      <!-- Topbar End -->
+  
+  
+      <!-- Navbar Start -->
+      <div class="container-fluid p-0" id="bar">
+          <nav class="navbar navbar-expand-lg py-3 py-lg-0 px-lg-5" style="
+          height: 44px;">
+              <a href="{% url 'home' %}" class="navbar-brand ml-lg-3">
+                {% if request.resolver_match.url_name == 'home' %}
+                  <img src="{% static 'images/samanthya_black.jpg' %}" alt="SAMARTHYA"> 
+                  {% endif %}
+                  <!-- <h1 class="m-0 text-uppercase text-primary">SAMARTHYA</h1> -->
+              </a>
+              <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                  <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse justify-content-between px-lg-3" id="navbarCollapse">
+                  <div class="navbar-nav mx-auto py-0">
+                      <a href="{% url 'home' %}" class="nav-item nav-link active">Home</a>
+                      <a href="#events" class="nav-item nav-link">Events</a>
+                      <a href="{% url 'Gallery' %}" class="nav-item nav-link">Gallery</a>
+                      <a href="{%  url 'about' %}" class="nav-item nav-link">About</a>
+                  </div>
+                  
+                  {% if user.is_authenticated %}
+                  {% if request.resolver_match.url_name != 'profile' %}
+                  <a href="{% url 'profile' user.id %}" id="login" class="btn btn-primary py-2 px-4 mx-3 d-none d-lg-block">Profile</a>
+                  <a href="{% url 'logout' %}" id="register" class="btn btn-primary py-2 px-4 d-none d-lg-block">Logout</a>
+                  {% endif %}
+                  {% else %}
+                  <a href="{% url 'login' %}" id="login" class="btn btn-primary py-2 px-4 mx-3 d-none d-lg-block">Login</a>
+                  <a href="{% url 'signup' %}" id="register" class="btn btn-primary py-2 px-4 d-none d-lg-block">Register</a>
+                  {% endif %}
+              </div>
+          </nav>
+      </div>
+      <!-- Navbar End -->  
+
+    {% block content %}
+    {% endblock %}
+    <!--===============================================================================================-->
+    <script src="{% static 'vendor/jquery/jquery-3.2.1.min.js' %}"></script>
+    <!--===============================================================================================-->
+    <script src="{% static 'vendor/animsition/js/animsition.min.js' %}"></script>
+    <!--===============================================================================================-->
+    <script src="{% static 'vendor/bootstrap/js/popper.js' %}"></script>
+    <script src="{% static 'vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+    <!--===============================================================================================-->
+    <script src="{% static 'vendor/select2/select2.min.js' %}"></script>
+    <!--===============================================================================================-->
+    <script src="{% static 'vendor/daterangepicker/moment.min.js' %}"></script>
+    <script src="{% static 'vendor/daterangepicker/daterangepicker.js' %}"></script>
+    <!--===============================================================================================-->
+    <script src="{% static 'vendor/countdowntime/countdowntime.js' %}"></script>
+    <!--===============================================================================================-->
+    {% block scriptindex %}
+    {% endblock scriptindex %}
+    {% block scriptsignup %}
+	<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+    {% endblock scriptsignup %}
+    <script src="{% static 'js/main.js' %}"></script>
+  </body>
+</html>

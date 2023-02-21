@@ -1,0 +1,267 @@
+ {% block content %}{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Samarthya</title>
+        <link rel="icon" type="image/x-icon" href="{% static 'favicon.ico' %}" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="{% static 'css/about.css' %}" rel="stylesheet" />
+        <link href="{% static 'css/style.css' %}" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <div style="height: 37px; " class="container-fluid bg-dark">
+            <div class="row py-1 px-lg-3">
+                <div class="col-lg-6 text-center text-lg-left mb-2 mb-lg-0">
+                    <div class="d-inline-flex align-items-center text-white">
+                        <small><i class="fa fa-phone-alt mr-2"></i>+ 86453 50200</small>
+                        <small class="px-3">|</small>
+                        <small><i class="fa fa-envelope mr-2"></i>klsamarthya@kluniversity.in</small>
+                    </div>
+                </div>
+                {% comment %} {% if request.resolver_match.url_name != 'profile' %}
+                        <span>
+                            <div class="toggle">
+                                <input type="checkbox" id="toggle" />
+                                <label for="toggle"></label>
+                            </div> 
+                            
+                        </span> 
+                {% endif %} {% endcomment %}
+                    
+                    
+                
+                <div class="col-lg-5 text-center text-lg-right">
+                    <div class="d-inline-flex align-items-center">
+                        <a class="text-white px-2" href="https://www.facebook.com/kl.csit">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a class="text-white px-2" href="https://twitter.com/klcsit">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a class="text-white px-2" href="">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a class="text-white px-2" href="https://www.instagram.com/kl.samarthya/">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a class="text-white pl-2" href="">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+    
+                       
+                        {% comment %} <button id="toggle" onclick="myFunction()">Toggle dark mode</button>  {% endcomment %}
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Topbar End -->
+    
+    
+        <!-- Navbar Start -->
+        <div class="container-fluid p-0" id="bar">
+            <nav class="navbar navbar-expand-lg py-3 py-lg-0 px-lg-5" style="
+            height: 44px;">
+                <a href="{% url 'home' %}" class="navbar-brand ml-lg-3">
+                    <img id="about" src="{% static 'images/samanthya_red.png' %}" alt="SAMARTHYA"> 
+                  {% comment %} {% if request.resolver_match.url_name != 'profile' %}
+                    <img src="{% static '/img/samarthya.png' %}" alt="SAMARTHYA"> 
+                    {% endif %} {% endcomment %}
+                    <!-- <h1 class="m-0 text-uppercase text-primary">SAMARTHYA</h1> -->
+                </a>
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-between px-lg-3" id="navbarCollapse">
+                    <div class="navbar-nav mx-auto py-0">
+                        <a href="{% url 'home' %}" class="nav-item nav-link active">Home</a>
+                        <a href="#events" class="nav-item nav-link">Events</a>
+                        <a href="{% url 'Gallery' %}" class="nav-item nav-link">Gallery</a>
+                        <a href="{%  url 'about' %}" class="nav-item nav-link">About</a>
+                    </div>
+                    
+                    {% if user.is_authenticated %}
+                    
+                    <a href="{% url 'profile' user.id %}" id="login" class="btn btn-primary py-2 px-4 mx-3 d-none d-lg-block">Profile</a>
+                    <a href="#" id="register" class="btn btn-primary py-2 px-4 d-none d-lg-block">Logout</a>
+                   
+                    {% else %}
+                    <a href="#" id="login" class="btn btn-primary py-2 px-4 mx-3 d-none d-lg-block">Login</a>
+                    <a href="#" id="register" class="btn btn-primary py-2 px-4 d-none d-lg-block">Register</a>
+                    {% endif %}
+                </div>
+            </nav>
+        </div>
+        <header class="masthead" style="background: url({% static 'img/bg-masthead.png' %});">
+            <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
+                <div class="d-flex justify-content-center">
+                    <div class="text-center">
+                        <h1 style=" text-align: center; font-family:Le major; padding-top: 155vh;  background-color: silver;">S<span style="text-align: center; font-family:Zaptron;">amarthya</span></h1>
+                        {% comment %} <h1 class="mx-auto my-0 text-uppercase">Samarthya</h1> {% endcomment %}
+                        <h2 class="text-maroon-50 mx-auto mt-2 mb-5" style="color: crimson; color: cyan; padding-button: 42px;">National Level fest organized by department of CSIT,KL University</h2>
+                        
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- About-->
+        <section class="about-section text-center" id="about">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <!-- <div class="col-lg-8">
+                        <h2 class="text-white mb-4">Built with Bootstrap 5</h2>
+                        <p class="text-white-50">
+                            Grayscale is a free Bootstrap theme created by Start Bootstrap. It can be yours right now, simply download the template on
+                            <a href="https://startbootstrap.com/theme/grayscale/">the preview page.</a>
+                            The theme is open source, and you can use it for any purpose, personal or commercial.
+                        </p>
+                    </div> -->
+                </div>
+                <img class="img-fluid" style="
+                max-width: 145%;
+                margin-left: -237px;
+                margin-top: 9%;
+            " src="{% static 'img/concert.jpg' %}" alt="..." />
+            </div>
+        </section>
+        <!-- Projects-->
+        <section class="projects-section bg-light" id="projects">
+            <div class="container px-4 px-lg-5">
+                <!-- Featured Project Row-->
+                <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
+                    <div class="col-xl-8 col-lg-7"><img style="height: 70vh;margin-left: 161px;margin-top: -137px;"class="img-fluid mb-3 mb-lg-0" src="{% static 'img/samarthya_poster.jpg' %}" alt="..." /></div>
+                    <div class="col-xl-4 col-lg-5">
+                        <div class="featured-text text-center text-lg-left">
+                            <h4>About Samarthya</h4>
+                            <p class="text-black-50 mb-0" style="color: cyan;">National level techno-cultural fest organized by the Dept of CS-IT . It is a two-day festival filled with activities, workshops and cultural activities, which focuses on testing the potential of students in both cultural and academic events which helps in improving their individual skills and bring an exposure.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project One Row-->
+                <div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
+                    <div class="col-lg-6"><img class="img-fluid" style="
+                        margin-top: 4px;
+                        height: 95%;
+                        margin-left: 12px;
+                        /* width: 466px; */
+                    " src="{% static 'img/csit_poster.png' %}" alt="..." /></div>
+                    <div class="col-lg-6">
+                        <div class="bg-black text-center h-100 project">
+                            <div class="d-flex h-100">
+                                <div class="project-text w-100 my-auto text-center text-lg-left">
+                                    <h4 class="text-white">About CSIT</h4>
+                                    <p class="mb-0 text-white-50" style="color: lightgoldenrodyellow;">Computer science and information technology (IT) are two related but distinct fields that deal with the processing, storage, and transmission of information.Computer science focuses on the theoretical and practical aspects of computing, including algorithms, data structures, programming languages, software design, and computer architecture.Information technology, on the other hand, is a more applied field that deals with the implementation and management of computer-based systems, networks, and databases. </p>
+                                    <hr class="d-none d-lg-block mb-0 ms-0" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project Two Row-->
+                <div class="row gx-0 justify-content-center">
+                    <div class="col-lg-6"><img class="img-fluid" style="
+                        margin-left: 2px;
+                        margin-top: 100px;
+                    " src="{% static 'img/klu.jpeg' %}" alt="..." /></div>
+                    
+                    <div class="col-lg-6 order-lg-first">
+                        <div class="bg-black text-center h-100 project">
+                            <div class="d-flex h-100">
+                                <div class="project-text w-100 my-auto text-center text-lg-right">
+                                    <h4 class="text-white">About KL University</h4>
+                                    <p class="mb-0 text-white-50" style="color: lavenderblush;">A haven of knowledge and an ecstatic learning atmosphere, KL University (KLU) is a private university located in the city of Vijayawada, in the state of Andhra Pradesh, India. It was established in 1980 as Koneru Lakshmaiah Education Foundation (KLEF) and was granted university status in 2009.
+
+                                        <br><br>KLU offers undergraduate and postgraduate programs in engineering, management, law, science, arts, and humanities. The university is known for its strong emphasis on research and innovation, and has collaborations with several leading universities and research institutions around the world.<span>Overall, KL University is a leading institution of higher education in India, known for its academic excellence, research focus, and commitment to innovation and entrepreneurship.</span></p>
+                                    <hr class="d-none d-lg-block mb-0 me-0" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- Footer Start -->
+    <div class="container-fluid position-relative overlay-top bg-dark text-white-50 py-1" id="about">
+        <div class="" style="margin-top: 90px;">
+            <div class="container mt-5 pt-2">
+                <div class="row">
+                    <div class="col-md-6 mb-1">
+                        <a href="index.html" class="navbar-brand">
+                            <h1 class="display-4" style="color: rgba(167,0,0,1);
+                            color: linear-gradient(343deg, rgba(167,0,0,1) 21%, rgba(7,255,244,1) 100%); text-align: center; font-family:Le major;">S<span style="text-align: center; font-family:Zaptron;">amarthya</span></h1>
+                        </a>
+                        <p class="m-0">National level techno-cultural fest organized by the Dept of CS-IT.</p>
+
+
+                    </div>
+                    <div class="col-md-6 mb-1">
+                        <h3 class="text-white mb-4"></h3>
+                        <div class="w-100">
+                        </div>
+                    </div>
+                </div>
+                <hr style="background-color: azure;">
+                <div class="row">
+                    <div class="col-md-6 mb-1">
+                        <h3 class="text-white mb-1">Get In Touch</h3>
+                        <p><i class="fa fa-map-marker-alt mr-1"></i>Green Fields, Vaddeswaram, Andhra Pradesh 522302</p>
+                        <p><i class="fa fa-phone-alt mr-1"></i>+ 86453 50200</p>
+                        <p><i class="fa fa-envelope mr-1"></i>klsamarthya@kluniversity.in</p>
+                        <div class="d-flex justify-content-start mt-1">
+                            <a class="text-white mr-3" href="https://twitter.com/klcsit"><i class="fab fa-2x fa-twitter"></i></a>
+                            <a class="text-white mr-3" href="https://www.facebook.com/kl.csit"><i class="fab fa-2x fa-facebook-f"></i></a>
+                            <a class="text-white mr-3" href="#"><i class="fab fa-2x fa-linkedin-in"></i></a>
+                            <a class="text-white" href="https://www.instagram.com/kl.csit/"><i class="fab fa-2x fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-1">
+                        <h3 class="text-white mb-1">Quick Links</h3>
+                        <div class="d-flex flex-column justify-content-start">
+                            <a class="text-white-50 mb-1" href="{%  url 'home' %}"><i class="fa fa-angle-right mr-2"></i>Home</a>
+                            <a class="text-white-50 mb-1" href="#events"><i class="fa fa-angle-right mr-2"></i>Events</a>
+                            <a class="text-white-50 mb-1" href="{% url 'Gallery' %}"><i class="fa fa-angle-right mr-2"></i>Gallery</a>
+                            <a class="text-white-50 mb-1" href="{%  url 'about' %}"><i class="fa fa-angle-right mr-2"></i>About</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="px-2 py-0" style="background-color: brown;">
+            <center>
+                <p class="m-0">Copyright &copy; <a class="text-white" href="#">SAMARTHYA</a>. All Rights Reserved.
+                </p>
+            </center>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary rounded-0 btn-lg-square back-to-top"><i
+            class="fa fa-angle-double-up"></i></a>
+        <!-- Signup-->
+        
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="{% static 'js/about.js' %}"></script>
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <!-- * *                               SB Forms JS                               * *-->
+        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    </body>
+</html>
+{% endblock %}

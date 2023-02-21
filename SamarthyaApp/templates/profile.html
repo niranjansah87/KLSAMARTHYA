@@ -1,0 +1,86 @@
+{% extends "base.html" %} {% block content %} {% load static %}
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.4/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.css"/>
+
+      <link
+      href="{% static 'lib/owlcarousel/assets/owl.carousel.min.css' %}"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{% static 'css/profile.css' %}">
+    
+<body class="img js-fullheight" style="background-image: url({% static 'img/profile.jpg' %});">
+
+   <div id="img">
+      <center><img src="{% static 'img/samarthya.png' %}" alt="Samarthya"></center>
+   </div>
+   <!-- class="img js-fullheight" style="background-image: url('profile.jpg');" -->
+    <div class="update-profile">
+      <!-- <h1>Profile</h1> -->
+
+        <!-- <?php
+           $select = mysqli_query($conn, "SELECT * FROM `user_form` WHERE id = '$user_id'") or die('query failed');
+           if(mysqli_num_rows($select) > 0){
+              $fetch = mysqli_fetch_assoc($select);
+           }
+        ?> -->
+     
+        <form action="#" method="post" enctype="multipart/form-data">
+           <!-- <?php
+              if($fetch['image'] == ''){
+                 echo '<img src="images/default-avatar.png">';
+              }else{
+                 echo '<img src="uploaded_img/'.$fetch['image'].'">';
+              }
+              if(isset($message)){
+                 foreach($message as $message){
+                    echo '<div class="message">'.$message.'</div>';
+                 }
+              }
+           ?> -->
+           <div class="flex">
+            
+              <div class="inputBox">
+               
+                 <span>Full name :</span>
+                 <input type="text" name="update_name" value="{{pdb.first_name}}" class="box" disabled>
+                 <span>Email :</span>
+                 <input type="email" name="update_email" value="{{pdb.email}}" class="box" disabled>
+                 <span>Payment Status:</span>
+                 {% if p.True %}
+                 <input value="Paid" class="box" disabled>
+                 {% else %}
+                 <input value="Unpaid" class="box" disabled>
+                 {% endif %}
+              </div>
+              
+              
+              <div class="inputBox">
+                 <input type="hidden" name="#" value="#">
+                 <span>ID NO:</span>
+                 <input value="{{pdb.username}}" class="box" disabled>
+                 <span>Phone Number:</span>
+                 <input value="{{pdb.last_name}}" class="box" disabled>
+                 
+              </div>
+           </div>
+           
+           
+           <a href="https://forms.gle/nbTTXj9HfjnLirWL9" class="btn">Pay the fee</a>
+           <a href="{% url 'home' %}" class="delete-btn">Go back</a>
+        </form>
+     
+     </div>
+</body>
+<script src="{% static 'js/profile.js' %}"></script>
+</html>
+{% endblock %}
