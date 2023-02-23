@@ -43,6 +43,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -75,6 +76,17 @@ WSGI_APPLICATION = 'Samarthya.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'samarthya',
+#         'USER': 'klsamarthya',
+#         'PASSWORD': 'Niranjan@8790',
+#         'HOST': 'klsamarthya.mysql.pythonanywhere-services.com',
+#         'PORT': '',
+#     }
+# }
 
 DATABASES = {
     'default': {
@@ -124,3 +136,5 @@ STATIC_DIRS=[STATIC_DIR]
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+

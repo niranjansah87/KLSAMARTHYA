@@ -3,8 +3,9 @@
 <html lang="en">
   <head>
     <title>Samarthya</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link
       rel="icon"
@@ -84,13 +85,13 @@
                           <div class="toggle">
                               <input type="checkbox" id="toggle" />
                               <label for="toggle"></label>
-                          </div> 
-                          
-                      </span> 
+                          </div>
+
+                      </span>
               {% endif %}
-                  
-                  
-              
+
+
+
               <div class="col-lg-5 text-center text-lg-right">
                   <div class="d-inline-flex align-items-center">
                       <a target="_blank" class="text-white px-2" href="https://www.facebook.com/kl.csit">
@@ -108,24 +109,24 @@
                       <a class="text-white pl-2" href="">
                           <i class="fab fa-youtube"></i>
                       </a>
-  
-                     
+
+
                       {% comment %} <button id="toggle" onclick="myFunction()">Toggle dark mode</button>  {% endcomment %}
-                      
+
                   </div>
               </div>
           </div>
       </div>
       <!-- Topbar End -->
-  
-  
+
+
       <!-- Navbar Start -->
       <div class="container-fluid p-0" id="bar">
           <nav class="navbar navbar-expand-lg py-3 py-lg-0 px-lg-5" style="
           height: 44px;">
               <a href="{% url 'home' %}" class="navbar-brand ml-lg-3">
                 {% if request.resolver_match.url_name == 'home' %}
-                  <img src="{% static 'images/samanthya_black.jpg' %}" alt="SAMARTHYA"> 
+                  <img src="{% static 'img/samanthya_black.JPG' %}" alt="SAMARTHYA">
                   {% endif %}
                   <!-- <h1 class="m-0 text-uppercase text-primary">SAMARTHYA</h1> -->
               </a>
@@ -139,7 +140,7 @@
                       <a href="{% url 'Gallery' %}" class="nav-item nav-link">Gallery</a>
                       <a href="{%  url 'about' %}" class="nav-item nav-link">About</a>
                   </div>
-                  
+
                   {% if user.is_authenticated %}
                   {% if request.resolver_match.url_name != 'profile' %}
                   <a href="{% url 'profile' user.id %}" id="login" class="btn btn-primary py-2 px-4 mx-3 d-none d-lg-block">Profile</a>
@@ -152,7 +153,7 @@
               </div>
           </nav>
       </div>
-      <!-- Navbar End -->  
+      <!-- Navbar End -->
 
     {% block content %}
     {% endblock %}
@@ -178,6 +179,7 @@
 	<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
     {% endblock scriptsignup %}
+
     <script src="{% static 'js/main.js' %}"></script>
   </body>
 </html>

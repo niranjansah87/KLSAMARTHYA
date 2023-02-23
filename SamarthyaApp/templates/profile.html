@@ -17,7 +17,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="{% static 'css/profile.css' %}">
-    
+
 <body class="img js-fullheight" style="background-image: url({% static 'img/profile.jpg' %});">
 
    <div id="img">
@@ -33,48 +33,34 @@
               $fetch = mysqli_fetch_assoc($select);
            }
         ?> -->
-     
+
         <form action="#" method="post" enctype="multipart/form-data">
-           <!-- <?php
-              if($fetch['image'] == ''){
-                 echo '<img src="images/default-avatar.png">';
-              }else{
-                 echo '<img src="uploaded_img/'.$fetch['image'].'">';
-              }
-              if(isset($message)){
-                 foreach($message as $message){
-                    echo '<div class="message">'.$message.'</div>';
-                 }
-              }
-           ?> -->
            <div class="flex">
-            
+
               <div class="inputBox">
-               
+
                  <span>Full name :</span>
                  <input type="text" name="update_name" value="{{pdb.first_name}}" class="box" disabled>
                  <span>Email :</span>
                  <input type="email" name="update_email" value="{{pdb.email}}" class="box" disabled>
-                 <span>Payment Status:</span>
-                 <input value="{{p.text}}" class="box" disabled>
               </div>
-              
-              
+
+
               <div class="inputBox">
                  <input type="hidden" name="#" value="#">
                  <span>ID NO:</span>
                  <input value="{{pdb.username}}" class="box" disabled>
                  <span>Phone Number:</span>
                  <input value="{{pdb.last_name}}" class="box" disabled>
-                 
+
               </div>
            </div>
-           
-           
+
+
            <a href="https://forms.gle/nbTTXj9HfjnLirWL9" class="btn">Pay the fee</a>
            <a href="{% url 'home' %}" class="delete-btn">Go back</a>
         </form>
-     
+
      </div>
 </body>
 <script src="{% static 'js/profile.js' %}"></script>

@@ -7,28 +7,30 @@
 <div class="container" id="form-body">
     <form method="POST" enctype="multipart/form-data">
         {% csrf_token %}
+        <div class="user_id">
+            <label for="user_id" class="form-label">ID Number</label>
+            <input type="number" name="username" id="user_id" class="form-control" required>
+        </div>
         <div class="user">
             <label for="name" class="form-label">First Name</label>
             <input type="text" name="first_name" id="user_name" class="form-control" required>
         </div>
-        <div class="user">
-            <label for="name" class="form-label">Last Name</label>
-            <input type="text" name="last_name" id="user_name" class="form-control" required>
-        </div>
         <div class="email">
-            <label for="email" class="form-label">Email Id</label>
+            <label for="email" class="form-label">Email </label>
             <input type="email" name="email" id="email" class="form-control" required>
         </div>
-        <div class="user_id">
-            <label for="user_id" class="form-label">User Id</label>
-            <input type="text" name="username" id="user_id" class="form-control" required>
+        <div class="user">
+            <label for="name" class="form-label">Contact Number</label>
+            <input type="number" name="last_name" id="user_name" class="form-control" required>
         </div>
+
+
         <div class="pass">
             <label for="password" class="form-label">Password</label>
             <input type="password" name="password1" id="password" class="form-control" required>
         </div>
         <div class="pass">
-            <label for="re-password" class="form-label">Re-Password</label>
+            <label for="re-password" class="form-label">Confirm Password</label>
             <input type="password" name="password2" id="password" class="form-control" required>
         </div>
         <div class="mb-3 form-check">
@@ -39,7 +41,7 @@
             <p>If You have already account? <a href="{% url 'login' %}">click here</a></p>
         </div>
         <div class="btn">
-            <button type="submit" class="btn btn-primary">Sgin In</button>
+            <button type="submit" class="btn btn-primary">Sign In</button>
         </div>
     </form>
 </div>

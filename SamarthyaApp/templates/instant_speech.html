@@ -6,24 +6,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Code Buster</title>
+    <title>Instant Speech</title>
     <link href="https://fonts.cdnfonts.com/css/bw-modelica" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css\event.css' %}">
     <link rel="stylesheet" href="{% static 'css\style.css' %}">
 </head>
 
-<body style="background-image: url( {% static 'img/event.jpg' %}); background-position: center;
+<body style="background-image: url( {% static '/img/tech.jpg' %}); background-position: center;
 background-size: cover;
 background-repeat: no-repeat;">
     <div class="">
 
-        
+
         <h1 id="text-box">Instant Speech</h1>
     </div>
     <div class="container ">
 
 
-        <img src="{% static 'img/samarthya_poster.png' %}" alt="Samarthya poster" srcset="">
+        <img src="{% static 'img/instant_speech.jpg' %}" alt="Samarthya poster" srcset=""style="height: 394px;
+    margin-top: 20px;
+    margin-left: 386px;
+    width: auto;">
 
     </div>
     <div class="w3-container">
@@ -60,9 +63,8 @@ background-repeat: no-repeat;">
             <div class="container mt-5 pt-2">
                 <div class="row">
                     <div class="col-md-6 mb-1">
-                        <a href="index.html" class="navbar-brand">
-                            <h1 class="display-4" style="color: rgba(167,0,0,1);
-                            color: linear-gradient(343deg, rgba(167,0,0,1) 21%, rgba(7,255,244,1) 100%); text-align: center; font-family:Le major;">S<span style="text-align: center; font-family:Zaptron;">amarthya</span></h1>
+                        <a href="{% url 'home' %}" class="navbar-brand">
+                            <img src="{% static '/img/samarthya.png' %}" alt="SAMARTHYA" style="height: 85px">
                         </a>
                         <p class="m-0" style="color: azure;">National level techno-cultural fest organized by the Dept of CS-IT . It is a two-day festival filled with activities, workshops and cultural activities, which focuses on testing the potential of students in both cultural and academic events which helps in improving their individual skills and bring an exposure.</p>
 

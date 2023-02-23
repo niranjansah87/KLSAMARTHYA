@@ -1,16 +1,16 @@
 @import url('https://fonts.cdnfonts.com/css/bw-modelica');
-
+@import url('https://fonts.cdnfonts.com/css/papyrus');
 
 .container{
     width: 100%;
     height: fit-content;
-    
+
     border: 1px;
-    
+
     background-size: cover;
     background-repeat: no-repeat;
     opacity: 1;
-    
+
 }
 /* .container {
     width: 320px;
@@ -23,33 +23,27 @@
     font-weight: 200;
     color:gold;
   }
-  
+
 #text-box{
     text-align: center;
     background-color: transparent;
     opacity: 0.9;
     color: cyan;
-    
+
     text-decoration: none;
 
 }
-img{
-    height: 370px;
-    margin-top: 20px;
-    margin-left: 0px;
-    width: 280px;
-    
-}
 
-h1{ 
+
+h1{
     text-decoration:underline;
     text-decoration-color: cyan;
-    font-family: papyrus;
+    font-family: 'Papyrus', sans-serif;
     font-weight: bold;
     font-size: 200;
 }
 p,ol{
-    color: azure;
+    color: maroon;
     font-size: 20px;
     font-weight: 700;
 }

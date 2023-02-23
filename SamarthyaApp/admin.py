@@ -1,6 +1,5 @@
 from django.contrib import admin
-from .models import payments,payment
+from .models import bool_model
 # Register your models here.
 
-admin.site.register(payments)
-admin.site.register(payment)
+admin.site.register(bool_model)

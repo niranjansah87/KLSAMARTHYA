@@ -4,32 +4,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Code Buster</title>
+    <title>Math Buzz</title>
     <link href="https://fonts.cdnfonts.com/css/bw-modelica" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css\event.css' %}">
     <link rel="stylesheet" href="{% static 'css\style.css' %}">
 </head>
-<body style="background-image: url({% static 'img/event.jpg' %}); background-position: center;
+<body style="background-image: url({% static '/img/event.jpg' %}); background-position: center;
 background-size: cover;
 background-repeat: no-repeat;">
 
-    
+
                 <div class="">
                     <h1 id="text-box">Math Buzz</h1>
                 </div>
                 <div class="container ">
-                    
-                    
-                    <img src="/samarthya_poster.png" alt="Samarthya poster" srcset="">
-                    
+
+
+                    <img src="{% static 'img/math_buzz.jpg' %}" alt="Math Buzz poster" srcset=""style="height: 394px;
+    margin-top: 20px;
+    margin-left: 386px;
+    width: auto;">
+
                 </div>
                 <div class="w3-container">
                     <h1>About the event</h1>
                     <p>A form with a one-minute time constraint will be provided.<br>
                         There will be questions provided.<br>
                         The person who responds to the most inquiries will win.
-                        
-                        
+
+
                         </p>
                         <hr>
                 </div>
@@ -38,8 +41,8 @@ background-repeat: no-repeat;">
                     <table>
                         <ol>
                             <li>Just the specified questionnaire should be open at a time.</li>
-                            
-                            
+
+
                         </ol>
                     </table>
                 </div>
@@ -48,7 +51,7 @@ background-repeat: no-repeat;">
             </body>
             <script src="event.js"></script>
             </html>
-            
+
             </p>
             <hr>
     </div>
@@ -59,7 +62,7 @@ background-repeat: no-repeat;">
                 <li>There should be no word repetition.</li>
                 <li>You have five seconds to respond. </li>
                 <li>If not, points will be taken away from that team.</li>
-                
+
             </ol>
         </table>
     </div>
@@ -73,9 +76,8 @@ background-repeat: no-repeat;">
             <div class="container mt-5 pt-2">
                 <div class="row">
                     <div class="col-md-6 mb-1">
-                        <a href="index.html" class="navbar-brand">
-                            <h1 class="display-4" style="color: rgba(167,0,0,1);
-                            color: linear-gradient(343deg, rgba(167,0,0,1) 21%, rgba(7,255,244,1) 100%); text-align: center; font-family:Le major;">S<span style="text-align: center; font-family:Zaptron;">amarthya</span></h1>
+                        <a href="{% url 'home' %}" class="navbar-brand">
+                            <img src="{% static '/img/samarthya.png' %}" alt="SAMARTHYA" style="height: 85px">
                         </a>
                         <p class="m-0" style="color: azure;">National level techno-cultural fest organized by the Dept of CS-IT . It is a two-day festival filled with activities, workshops and cultural activities, which focuses on testing the potential of students in both cultural and academic events which helps in improving their individual skills and bring an exposure.</p>
 
@@ -113,7 +115,7 @@ background-repeat: no-repeat;">
                 </div>
             </div>
         </div>
-        <div class="px-2 py-0" style="background-color: brown;">
+        <div class="px-2 py-0" style="background-color: LightGrey;">
             <center>
                 <p class="m-0">Copyright &copy; <a class="text-white" href="#">SAMARTHYA</a>. All Rights Reserved.
                 </p>

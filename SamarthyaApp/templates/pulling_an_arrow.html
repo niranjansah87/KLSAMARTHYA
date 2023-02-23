@@ -1,0 +1,113 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samarthya</title>
+    <link href="https://fonts.cdnfonts.com/css/bw-modelica" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css\event.css' %}">
+    <link rel="stylesheet" href="{% static 'css\style.css' %}">
+</head>
+
+<body style="background-image: url( {% static 'img/non-tech.jpg' %}); background-position: center;
+background-size: cover;
+background-repeat: no-repeat;">
+    <div class="">
+
+
+        <h1 id="text-box">Pulling an Arrow</h1>
+    </div>
+    <div class="container ">
+
+
+
+        <img src="{% static 'img/tug_of_war.jpg' %}" alt="Samarthya poster" srcset=""style="height: 394px;
+    margin-top: 20px;
+    margin-left: 386px;
+    width: auto;">
+
+    </div>
+    <div class="w3-container">
+        <h1>About the event</h1>
+
+        <p>Each team's goal is to pull the rope over to their side,</p>
+        <p>along with the players on the opposing team.</p>
+        <p>The team that pulls the rope to their area first wins the game when.</p>
+        <p>the second mark on the rope from the center red mark</p>
+        <p>crosses over to the center line.</p>
+    </div>
+    <div class="w3-container">
+        <h1>Rules</h1>
+        <p>This game has a certain method that must be used to play.</p>
+        <p>failure to do so will result in a foul and possible disqualification.</p>
+        <p>For instance, lowering your elbow below the level of your knee </p>
+        <p>while tugging the rope is seen as a foul and is known as "locking."</p>
+        <p>Longer-lasting contact with the ground is also viewed as a foul.</p>
+        <hr>
+    </div>
+        <h1>Organizer</h1>
+        <p>Abhishek-2000090056</p>
+    </div>
+   <!-- Footer Start -->
+    <div class="container-fluid position-relative overlay-top bg-dark text-white-50 py-1" id="about">
+        <div class="" style="margin-top: 90px;">
+            <div class="container mt-5 pt-2">
+                <div class="row">
+                    <div class="col-md-6 mb-1">
+                        <a href="{% url 'home' %}" class="navbar-brand">
+                            <img src="{% static '/img/yellow.png' %}" alt="SAMARTHYA" style="height: 85px">
+                        </a>
+                        <p class="m-0" style="color: azure;">National level techno-cultural fest organized by the Dept of CS-IT . It is a two-day festival filled with activities, workshops and cultural activities, which focuses on testing the potential of students in both cultural and academic events which helps in improving their individual skills and bring an exposure.</p>
+
+
+                    </div>
+                    <div class="col-md-6 mb-1">
+                        <h3 class="text-white mb-4"></h3>
+                        <div class="w-100">
+                        </div>
+                    </div>
+                </div>
+                <hr style="background-color: azure;">
+                <div class="row">
+                    <div class="col-md-6 mb-1">
+                        <h3 class="text-white mb-1">Get In Touch</h3>
+                        <p><i class="fa fa-map-marker-alt mr-1"></i>Green Fields, Vaddeswaram, Andhra Pradesh 522302</p>
+                        <p><i class="fa fa-phone-alt mr-1"></i>+ 86453 50200</p>
+                        <p><i class="fa fa-envelope mr-1"></i>@kluniversity.in</p>
+                        <div class="d-flex justify-content-start mt-1">
+                            <a target="_blank" class="text-white mr-3" href="https://twitter.com/klcsit"><i class="fab fa-2x fa-twitter"></i></a>
+                            <a target="_blank" class="text-white mr-3" href="https://www.facebook.com/kl.csit"><i class="fab fa-2x fa-facebook-f"></i></a>
+                            <a target="_blank" class="text-white mr-3" href="#"><i class="fab fa-2x fa-linkedin-in"></i></a>
+                            <a target="_blank" class="text-white" href="https://www.instagram.com/kl.csit/"><i class="fab fa-2x fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-1">
+                        <h3 class="text-white mb-1">Quick Links</h3>
+                        <div class="d-flex flex-column justify-content-start">
+                            <a class="text-white-50 mb-1" href="{%  url 'home' %}"><i class="fa fa-angle-right mr-2"></i>Home</a>
+                            <a class="text-white-50 mb-1" href="#events"><i class="fa fa-angle-right mr-2"></i>Events</a>
+                            <a class="text-white-50 mb-1" href="{% url 'Gallery' %}"><i class="fa fa-angle-right mr-2"></i>Gallery</a>
+                            <a class="text-white-50 mb-1" href="{%  url 'about' %}"><i class="fa fa-angle-right mr-2"></i>About</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="px-2 py-0" style="background-color: brown;">
+            <center>
+                <p class="m-0">Copyright &copy; <a class="text-white" href="#">SAMARTHYA</a>. All Rights Reserved.
+                </p>
+            </center>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary rounded-0 btn-lg-square back-to-top"><i
+            class="fa fa-angle-double-up"></i></a>
+</body>
+</html>
